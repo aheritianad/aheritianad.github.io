@@ -1,0 +1,52 @@
+---
+layout: default
+previewchild: false
+enumerategrandchild: false
+previewchild: false
+---
+
+<article class="toctree">
+
+    <h1>{{ page.title }}</h1>
+
+    <div class="entry">
+        {{ content }}
+    </div>
+
+    <h2> Contents </h2>
+
+    <ul>
+        {% for post in site.posts %}
+        {%if post.parent == page.url %}
+        <li>
+            <h3>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            {% if page.previewchild == true %}
+            <div class="entry">
+                {{ post.excerpt }}
+            </div>
+            {% endif %}
+            {% if page.enumerategrandchild == true %}
+            <ul>
+                {% for post2 in site.posts %}
+                {% if post2.parent == post.url%}
+                <li>
+                    <h4>
+                        <a href="{{ site.baseurl }}{{ post2.url }}">{{ post2.title }}</a>
+                    </h4>
+                    {% if page.previewgrandchild == true %}
+                    <div class="entry">
+                        {{ post2.excerpt }}
+                    </div>
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</article>
