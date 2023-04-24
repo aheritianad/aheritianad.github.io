@@ -2,9 +2,10 @@
 layout: toctree
 title: Blogs
 permalink: /blogs/
-previewchild: false
+
+previewchild: true
 enumerategrandchild: true
-previewchild: false
+previewgrandchild: true
 ---
 
 This is the genealogy tree of all blogs here.
