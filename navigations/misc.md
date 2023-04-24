@@ -1,8 +1,7 @@
 ---
-layout: toctree
-title: Teaching
-permalink: /teaching/
-remote_theme: 
+layout: page
+title: Miscellaneous
+permalink: /misc/
 
 previewchild: true
 enumerategrandchild: true

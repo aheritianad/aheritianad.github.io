@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: toctree
 title: Projects
 permalink: /projects/
 
