@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+  <title>{% if page.title %}{{ page.title }} {% else %} {{ site.name }}{% endif %}</title>
 
   {% include meta.html %}
 
@@ -30,8 +30,11 @@
 
         <nav>
           <a href="{{ site.baseurl }}/">Home</a>
+          <a href="{{ site.baseurl }}/projects/">Projects</a>
+          <a href="{{ site.baseurl }}/teaching/">Teaching</a>
           <a href="{{ site.baseurl }}/blogs/">Blogs</a>
-          <a href="{{ site.baseurl }}/about/">About</a>
+          <a href="{{ site.baseurl }}/cur-vitae/">CV</a>
+          <a href="{{ site.baseurl }}/contacts/">Contacts</a>
         </nav>
       </header>
     </div>

@@ -1,15 +1,16 @@
 ---
 layout: default
+
 previewchild: false
 enumerategrandchild: false
-previewchild: false
+previewgrandchild: false
 ---
 
 <article class="toctree">
 
     <h1>
         <a href="{{ site.baseurl }}{{ page.parent }}">
-            {{ page.title }}
+            {{ page.title }} {% if page.parent %}&#x2934;{% endif %}
         </a>
     </h1>
 
@@ -17,14 +18,16 @@ previewchild: false
         {{ content }}
     </div>
 
-    <h2> Contents </h2>
 
-    <ul>
-        {% for post in site.posts %}
+
+    <ol>
+        {% assign sorted_post = site.posts|sort %}
+
+        {% for post in sorted_post %}
         {%if post.parent == page.url %}
         <li>
             <h3>
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a>
             </h3>
             {% if page.previewchild == true %}
             <div class="entry">
@@ -33,7 +36,7 @@ previewchild: false
             {% endif %}
             {% if page.enumerategrandchild == true %}
             <ul>
-                {% for child_post in site.posts %}
+                {% for child_post in sorted_post %}
                 {% if child_post.parent == post.url%}
                 <li>
                     <h4>
@@ -52,5 +55,5 @@ previewchild: false
         </li>
         {% endif %}
         {% endfor %}
-    </ul>
+    </ol>
 </article>
