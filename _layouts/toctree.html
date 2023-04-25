@@ -9,51 +9,62 @@ previewgrandchild: false
 <article class="toctree">
 
     <h1>
+        {{ page.title }}
+        {% if page.parent %}
         <a href="{{ site.baseurl }}{{ page.parent }}">
-            {{ page.title }} {% if page.parent %}&#x2934;{% endif %}
+            &#x2934;
         </a>
+        {% endif %}
     </h1>
+
+    {% if page.hidetoc%}
+    <details>
+        <summary>Table of contents</summary>
+        {% endif %}
+
+        <ol>
+            {% assign sorted_post = site.posts|sort %}
+
+            {% for post in sorted_post %}
+            {%if post.parent == page.url %}
+            <li>
+                <h3>
+                    <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a>
+                </h3>
+                {% if page.previewchild == true %}
+                <div class="entry">
+                    {{ post.excerpt }}
+                </div>
+                {% endif %}
+                {% if page.enumerategrandchild == true %}
+                <ul>
+                    {% for child_post in sorted_post %}
+                    {% if child_post.parent == post.url%}
+                    <li>
+                        <h4>
+                            <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
+                        </h4>
+                        {% if page.previewgrandchild == true %}
+                        <div class="entry">
+                            {{ child_post.excerpt }}
+                        </div>
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+
+        {% if page.hidetoc%}
+    </details>
+    {% endif %}
 
     <div class="entry">
         {{ content }}
     </div>
 
-
-
-    <ol>
-        {% assign sorted_post = site.posts|sort %}
-
-        {% for post in sorted_post %}
-        {%if post.parent == page.url %}
-        <li>
-            <h3>
-                <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a>
-            </h3>
-            {% if page.previewchild == true %}
-            <div class="entry">
-                {{ post.excerpt }}
-            </div>
-            {% endif %}
-            {% if page.enumerategrandchild == true %}
-            <ul>
-                {% for child_post in sorted_post %}
-                {% if child_post.parent == post.url%}
-                <li>
-                    <h4>
-                        <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
-                    </h4>
-                    {% if page.previewgrandchild == true %}
-                    <div class="entry">
-                        {{ child_post.excerpt }}
-                    </div>
-                    {% endif %}
-                </li>
-                {% endif %}
-                {% endfor %}
-            </ul>
-            {% endif %}
-        </li>
-        {% endif %}
-        {% endfor %}
-    </ol>
 </article>
