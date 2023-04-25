@@ -1,8 +1,8 @@
 ---
 layout: toctree
 title: Python Frameworks & Libraries
-permalink: /blogs/coding/python/frameworks/
-parent: /blogs/coding/python/
+permalink: /blog/coding/python/frameworks/
+parent: /blog/coding/python/
 
 previewchild: true
 enumerategrandchild: true
