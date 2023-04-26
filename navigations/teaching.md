@@ -4,7 +4,7 @@ title: Teaching
 permalink: /teaching/
 remote_theme: 
 
-previewchild: true
+
 enumerategrandchild: true
-previewgrandchild: true
+
 ---

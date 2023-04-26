@@ -1,9 +1,7 @@
 ---
-layout: page
+layout: toctree
 title: Miscellaneous
 permalink: /misc/
 
-previewchild: true
 enumerategrandchild: true
-previewgrandchild: true
 ---
