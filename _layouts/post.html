@@ -11,6 +11,10 @@ layout: default
     </a>
     {% endif %}
   </h1>
+  
+  {% if page.youtube-video-id %}
+  {% include youtube.html%}
+  {% endif %}
 
   <div class="entry">
     {{ content }}
