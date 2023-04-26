@@ -1,0 +1,16 @@
+<ul>
+    {% for post in site.posts %}
+    {% if post.layout == "post" and post.url contains page.url %}
+    <li>
+        <h3>
+            <a href="{{site.url}}{{post.url}}">{{post.title}}</a>
+        </h3>
+        {{ post.excerpt }}
+        <div class="date">
+            Written on {{ post.date | date: "%B %e, %Y" }}
+        </div>
+        [<a class="read-more" href="{{site.url}}{{post.url}}">Read more ...</a>]
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
