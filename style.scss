@@ -271,6 +271,7 @@ nav {
   }
 }
 
+
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
@@ -281,6 +282,51 @@ nav {
 footer {
   padding: 20px 0;
   text-align: center;
+}
+//. toc
+
+.toc {
+  grid-area: menu;
+}
+
+.contentmain {
+  grid-area: main;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+      'menu main main main main main main main';
+  gap: 10px;
+  padding: 10px;
+
+  @include mobile{
+    gap: 0px;
+    padding: 5px;
+    grid-template-areas:
+      'menu'
+      'main';
+  }
+}
+
+.grid-container>div.toc {
+  background-color: #abe1e1;
+  color: black;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  overflow-x: auto;
+
+  a{
+    color: black;
+    font-family: Verdana,sans-serif;
+  }
+
+  @include mobile {
+    font-size: 15px;
+    margin: 10px;
+    padding: 5px;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

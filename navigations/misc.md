@@ -3,5 +3,5 @@ layout: toctree
 title: Miscellaneous
 permalink: /misc/
 
-enumerategrandchild: true
+enumerate_grand_children: true
 ---

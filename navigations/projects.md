@@ -4,6 +4,6 @@ title: Projects
 permalink: /projects/
 
 
-enumerategrandchild: true
+enumerate_grand_children: true
 
 ---

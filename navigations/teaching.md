@@ -5,6 +5,6 @@ permalink: /teaching/
 remote_theme: 
 
 
-enumerategrandchild: true
+enumerate_grand_children: true
 
 ---
