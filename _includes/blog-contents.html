@@ -1,4 +1,9 @@
 <ul>
+    {% if page.max_num_posts %}
+
+
+    {% assign counter = 1 %}
+
     {% for post in site.posts %}
     {% if post.layout == "post" and post.url contains page.url %}
     <li>
@@ -12,5 +17,14 @@
         [<a class="read-more" href="{{site.url}}{{post.url}}">Read more ...</a>]
     </li>
     {% endif %}
+
+    {% if counter == page.max_num_posts %}
+    {% break %}
+    {% endif %}
+
+    {% assign counter = counter + 1 %}
+
     {% endfor %}
+    {% endif %}
+
 </ul>
