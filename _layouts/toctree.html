@@ -1,70 +1,85 @@
 ---
 layout: default
-
-previewchild: false
-enumerategrandchild: false
-previewgrandchild: false
+enumerate_grand_children: false
 ---
 
-<article class="toctree">
+
+<article>
 
     <h1>
-        {{ page.title }}
         {% if page.parent %}
-        <a href="{{ site.baseurl }}{{ page.parent }}">
-            &#x2934;
-        </a>
+        {% for post in site.posts%}
+        {% if post.url == page.parent %}
+        {% assign parent = post%}
+        {% break %}
         {% endif %}
+        {% endfor %}
+        {% if parent.parent %}
+        <a href="{{ site.baseurl }}{{ parent.parent }}">
+            ..
+        </a>
+        &#8827;
+        {% endif %}
+        <a href="{{ site.baseurl }}{{ page.parent }}">
+            {{parent.title}}
+        </a>
+        &#8827;
+        {% endif %}
+        {{ page.title }}
     </h1>
 
-    {% if page.hidetoc%}
-    <details>
-        <summary>Table of contents</summary>
-        {% endif %}
+    <div class="grid-container">
 
-        <ol>
-            {% assign sorted_post = site.posts|sort %}
-
-            {% for post in sorted_post %}
-            {%if post.parent == page.url %}
-            <li>
-                <h3>
-                    <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}"> {{ post.title }}</a>
-                </h3>
-                {% if page.previewchild == true %}
-                <div class="entry">
-                    {{ post.excerpt }}
-                </div>
+        <div class="toc">
+            <h3>
+                {% if page.toc_title %}
+                {{page.toc_title}}
+                {% else %}
+                Contents
                 {% endif %}
-                {% if page.enumerategrandchild == true %}
-                <ul>
-                    {% for child_post in sorted_post %}
-                    {% if child_post.parent == post.url%}
-                    <li>
-                        <h4>
-                            <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
-                        </h4>
-                        {% if page.previewgrandchild == true %}
-                        <div class="entry">
-                            {{ child_post.excerpt }}
-                        </div>
-                        {% endif %}
-                    </li>
+            </h3>
+            <ol>
+                {% assign sorted_post = site.posts|sort %}
+
+                {% for post in sorted_post %}
+                {%if post.parent == page.url %}
+                <li>
+                    {% if page.enumerate_grand_children == true and post.layout == "toctree" %}
+                    <details>
+                        <summary>
+                            {% endif %}
+
+                            <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+
+                            {% if page.enumerate_grand_children == true %}
+                        </summary>
+
+                        <ul>
+                            {% for child_post in sorted_post %}
+                            {% if child_post.parent == post.url%}
+                            <li>
+                                <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </details>
                     {% endif %}
-                    {% endfor %}
-                </ul>
+
+                </li>
                 {% endif %}
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ol>
+                {% endfor %}
+            </ol>
 
-        {% if page.hidetoc%}
-    </details>
-    {% endif %}
+        </div>
 
-    <div class="entry">
-        {{ content }}
+        <div class="entry contentmain">
+            {{ content }}
+
+            {% include blog-contents.html%}
+        </div>
     </div>
 
 </article>
