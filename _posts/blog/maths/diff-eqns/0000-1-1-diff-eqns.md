@@ -1,0 +1,8 @@
+---
+layout: toctree
+title: Differential Equations
+permalink: /blog/maths/diff-eqns/
+parent: /blog/maths/
+
+enumerate_grand_children: true
+---

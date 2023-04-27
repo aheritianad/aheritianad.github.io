@@ -3,9 +3,7 @@ layout: default
 enumerate_grand_children: false
 ---
 
-
 <article>
-
     <h1>
         {% if page.parent %}
         {% for post in site.posts%}
@@ -29,7 +27,6 @@ enumerate_grand_children: false
     </h1>
 
     <div class="grid-container">
-
         <div class="toc">
             <h3>
                 {% if page.toc_title %}
@@ -40,7 +37,6 @@ enumerate_grand_children: false
             </h3>
             <ol>
                 {% assign sorted_post = site.posts|sort %}
-
                 {% for post in sorted_post %}
                 {%if post.parent == page.url %}
                 <li>
@@ -48,14 +44,11 @@ enumerate_grand_children: false
                     <details>
                         <summary>
                             {% endif %}
-
                             <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}">
                                 {{ post.title }}
                             </a>
-
                             {% if page.enumerate_grand_children == true %}
                         </summary>
-
                         <ul>
                             {% for child_post in sorted_post %}
                             {% if child_post.parent == post.url%}
@@ -67,17 +60,14 @@ enumerate_grand_children: false
                         </ul>
                     </details>
                     {% endif %}
-
                 </li>
                 {% endif %}
                 {% endfor %}
             </ol>
-
         </div>
 
         <div class="entry contentmain">
             {{ content }}
-
             {% include blog-contents.html%}
         </div>
     </div>

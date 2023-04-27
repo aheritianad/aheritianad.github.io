@@ -1,0 +1,8 @@
+---
+layout: toctree
+title: Kivy & KivyMD
+permalink: /blog/coding/python/frameworks/gui/kivy-kivymd/
+parent: /blog/coding/python/frameworks/gui/
+
+enumerate_grand_children: true
+---

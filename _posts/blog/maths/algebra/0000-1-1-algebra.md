@@ -1,0 +1,8 @@
+---
+layout: toctree
+title: Algebra
+permalink: /blog/maths/alg/
+parent: /blog/maths/
+
+enumerate_grand_children: true
+---

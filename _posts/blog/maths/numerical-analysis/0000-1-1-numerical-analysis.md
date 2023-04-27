@@ -1,0 +1,8 @@
+---
+layout: toctree
+title: Numerical Analysis
+permalink: /blog/maths/num-analysis/
+parent: /blog/maths/
+
+enumerate_grand_children: true
+---
