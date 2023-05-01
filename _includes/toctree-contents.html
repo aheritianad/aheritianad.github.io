@@ -1,13 +1,14 @@
 <ul>
     {% assign counter = 0 %}
+    {% assign page_url_array = page.url|split:'/' %}
+    {% assign page_tag = page_url_array[-1] %}
 
     {% for post in site.posts %}
-
     {% if counter >= page.max_num_posts %}
     {% break %}
     {% endif %}
-
-    {% if post.layout == "post" and post.url contains page.url %}
+    {% if post.layout contains "post"%}
+    {% if post.url contains page.url or post.tags contains page_tag %}
     <li>
         <h3>
             <a href="{{site.url}}{{post.url}}">{{post.title}}</a>
@@ -18,10 +19,9 @@
         </div>
         [<a class="read-more" href="{{site.url}}{{post.url}}">Read more ...</a>]
     </li>
-
     {% assign counter = counter + 1 %}
     {% endif %}
-
+    {% endif %}
     {% endfor %}
 
 </ul>
