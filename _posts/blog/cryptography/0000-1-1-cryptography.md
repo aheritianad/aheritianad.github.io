@@ -2,7 +2,6 @@
 layout: toctree
 title: Cryptography & Hashing
 permalink: /blog/cryptography/
-parent: /blog/
 
 enumerate_grand_children: true
 ---

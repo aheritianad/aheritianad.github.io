@@ -2,7 +2,6 @@
 layout: toctree
 title: MarkDown
 permalink: /blog/coding/md/
-parent: /blog/coding/
 
 enumerate_grand_children: true
 ---

@@ -2,7 +2,6 @@
 layout: toctree
 title: Representation Theory
 permalink: /blog/maths/repr-theory/
-parent: /blog/maths/
 
 enumerate_grand_children: true
 ---

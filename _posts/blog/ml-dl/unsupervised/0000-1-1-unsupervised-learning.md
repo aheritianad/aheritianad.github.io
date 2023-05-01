@@ -2,7 +2,6 @@
 layout: toctree
 title: Unsupervised Learning
 permalink: /blog/ml-dl/unsupervised/
-parent: /blog/ml-dl/
 
 enumerate_grand_children: true
 ---

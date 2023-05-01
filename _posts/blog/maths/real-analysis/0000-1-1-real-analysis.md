@@ -2,7 +2,6 @@
 layout: toctree
 title: Real Analysis
 permalink: /blog/maths/real-analysis/
-parent: /blog/maths/
 
 enumerate_grand_children: true
 ---

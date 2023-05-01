@@ -2,7 +2,6 @@
 layout: toctree
 title: Data Structure
 permalink: /blog/dsa/ds/
-parent: /blog/dsa/
 
 enumerate_grand_children: true
 ---

@@ -38,7 +38,10 @@ enumerate_grand_children: false
             <ol>
                 {% assign sorted_post = site.posts|sort %}
                 {% for post in sorted_post %}
-                {%if post.parent == page.url %}
+                {% assign post_url = post.url|split:"/" %}
+                {% assign post_parent = post_url|pop %}
+                {% assign page_url = page.url|split:"/"%}
+                {%if post_parent == page_url %}
                 <li>
                     {% if page.enumerate_grand_children == true and post.layout == "toctree" %}
                     <details>
@@ -51,7 +54,9 @@ enumerate_grand_children: false
                         </summary>
                         <ul>
                             {% for child_post in sorted_post %}
-                            {% if child_post.parent == post.url%}
+                            {% assign child_post_url_array = child_post.url|split:"/" %}
+                            {% assign child_post_parent = child_post_url_array|pop %}
+                            {% if child_post_parent == post_url%}
                             <li>
                                 <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
                             </li>
