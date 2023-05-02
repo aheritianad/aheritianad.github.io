@@ -3,23 +3,32 @@ layout: default
 enumerate_grand_children: false
 ---
 
+{% assign page_url_array = page.url|split:"/" %}
+{% assign page_url_popped = page_url_array|pop %}
+{% assign page_url_popped2 = page_url_array|pop:2%}
+{% assign page_parent = page_url_popped|join:"/" %}
+{% assign page_grand_parent = page_url_popped2|join:"/" %}
+{% if page_parent%}
+{% for post in site.posts%}
+{% if post.url == page_parent %}
+{% assign parent_title = post.title%}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
 <article>
+
     <h1>
-        {% if page.parent %}
-        {% for post in site.posts%}
-        {% if post.url == page.parent %}
-        {% assign parent = post%}
-        {% break %}
-        {% endif %}
-        {% endfor %}
-        {% if parent.parent %}
-        <a href="{{ site.baseurl }}{{ parent.parent }}">
+        {% if page_parent.size > 0 %}
+        {% if page_grand_parent.size > 0 %}
+        <a href="{{ site.baseurl }}{{ page_grand_parent }}">
             ..
         </a>
         &#8827;
         {% endif %}
-        <a href="{{ site.baseurl }}{{ page.parent }}">
-            {{parent.title}}
+        <a href="{{ site.baseurl }}{{ page_parent }}">
+            {{parent_title}}
         </a>
         &#8827;
         {% endif %}
@@ -41,6 +50,7 @@ enumerate_grand_children: false
                 {% assign post_url = post.url|split:"/" %}
                 {% assign post_parent = post_url|pop %}
                 {% assign page_url = page.url|split:"/"%}
+
                 {%if post_parent == page_url %}
                 <li>
                     {% if page.enumerate_grand_children == true and post.layout == "toctree" %}

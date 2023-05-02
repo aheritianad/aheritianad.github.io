@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Curriculum Vitae
-permalink: /cur-vitae/
+permalink: /cur-vitae
 ---
