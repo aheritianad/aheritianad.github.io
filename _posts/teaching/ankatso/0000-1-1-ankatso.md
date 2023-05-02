@@ -1,7 +1,7 @@
 ---
 layout: toctree
 title: Ankatso
-permalink: /teaching/ankatso
+permalink: /teaching/ankatso/
 
 enumerate_grand_children: true
 ---

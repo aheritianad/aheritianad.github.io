@@ -1,7 +1,7 @@
 ---
 layout: toctree
 title: Teaching
-permalink: /teaching
+permalink: /teaching/
 
 enumerate_grand_children: true
 ---
