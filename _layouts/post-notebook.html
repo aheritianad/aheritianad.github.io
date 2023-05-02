@@ -1,0 +1,30 @@
+---
+layout: default-notebook
+---
+
+{% assign page_url_array = page.url|split:"/" %}
+{% assign page_url_popped = page_url_array|pop %}
+{% assign page_parent = page_url_popped|join:"/" %}
+
+<article>
+  <h1>
+    {{ page.title }}
+    <a href="{{ site.baseurl }}{{ page_parent }}">
+      &#x2934;
+    </a>
+  </h1>
+
+  {% if page.youtube-video-id %}
+  {% include youtube.html%}
+  {% endif %}
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+
+  {% include disqus.html %}
+</article>
