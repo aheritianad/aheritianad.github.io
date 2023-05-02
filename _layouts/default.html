@@ -19,6 +19,12 @@
 </head>
 
 <body>
+  {% assign page_url_array = page.url|split:"/" %}
+  {% assign page_url_popped = page_url_array|pop %}
+  {% assign page_url_popped2 = page_url_array|pop:2%}
+  {% assign page_parent = page_url_popped|join:"/" %}
+  {% assign page_grand_parent = page_url_popped2|join:"/" %}
+
   <div class="wrapper-masthead">
     <div class="container">
       <header class="masthead clearfix">
