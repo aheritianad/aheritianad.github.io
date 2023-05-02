@@ -1,7 +1,7 @@
 ---
-layout: toctree
+layout: root-directory
 title: Cryptography & Hashing
-permalink: /blog/cryptography
+permalink: /blog/crypto-hash-blockchain/
 
 enumerate_grand_children: true
 ---

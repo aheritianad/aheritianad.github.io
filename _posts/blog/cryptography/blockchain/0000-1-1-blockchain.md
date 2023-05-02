@@ -1,7 +1,7 @@
 ---
-layout: toctree
+layout: root-directory
 title: Blockchain
-permalink: /blog/cryptography/blockchain/
+permalink: /blog/crypto-hash-blockchain/blockchain/
 
 enumerate_grand_children: true
 ---

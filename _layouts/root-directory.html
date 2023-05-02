@@ -7,7 +7,9 @@ enumerate_grand_children: false
 {% assign page_url_popped = page_url_array|pop %}
 {% assign page_url_popped2 = page_url_array|pop:2%}
 {% assign page_parent = page_url_popped|join:"/" %}
+{% assign page_parent = page_parent|append:"/" %}
 {% assign page_grand_parent = page_url_popped2|join:"/" %}
+{% assign page_grand_parent = page_grand_parent|append:"/" %}
 {% if page_parent%}
 {% for post in site.posts%}
 {% if post.url == page_parent %}
@@ -20,8 +22,8 @@ enumerate_grand_children: false
 <article>
 
     <h1>
-        {% if page_parent.size > 0 %}
-        {% if page_grand_parent.size > 0 %}
+        {% if page_parent.size > 1 %}
+        {% if page_grand_parent.size > 1 %}
         <a href="{{ site.baseurl }}{{ page_grand_parent }}">
             ..
         </a>
@@ -53,7 +55,7 @@ enumerate_grand_children: false
 
                 {%if post_parent == page_url %}
                 <li>
-                    {% if page.enumerate_grand_children == true and post.layout == "toctree" %}
+                    {% if page.enumerate_grand_children == true and post.layout == "root-directory" %}
                     <details>
                         <summary>
                             {% endif %}
@@ -83,7 +85,7 @@ enumerate_grand_children: false
 
         <div class="entry contentmain">
             {{ content }}
-            {% include toctree-contents.html%}
+            {% include root-dir-contents.html %}
         </div>
     </div>
 

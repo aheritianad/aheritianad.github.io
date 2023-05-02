@@ -1,7 +1,7 @@
 ---
-layout: toctree
+layout: root-directory
 title: Topology & Metric Spaces
-permalink: /blog/maths/topo-metric
+permalink: /blog/maths/topo-metric/
 
 enumerate_grand_children: true
 ---
