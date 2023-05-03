@@ -117,8 +117,13 @@ img {
 
 .date {
   font-style: italic;
+  font-size: small;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: $gray;
+  
 }
+
+
 
 // Specify the color of the selection
 ::-moz-selection {
@@ -327,6 +332,31 @@ footer {
     margin: 10px;
     padding: 5px;
   }
+}
+
+
+.date-tags{
+  width: auto;
+
+  .separator{
+    width: 20px;
+  }
+
+  .tags{
+    margin: 1px;
+    >a{
+      background-color: #e1ebf5;
+    }
+  }
+}
+
+.tag-instance {
+  font-size: small;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 2px;
+  margin: inherit;
+  border-radius: 10px;
+  box-sizing: content-box;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
