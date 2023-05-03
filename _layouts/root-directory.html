@@ -27,18 +27,19 @@ enumerate_grand_children: false
         <a href="{{ site.baseurl }}{{ page_grand_parent }}">
             ..
         </a>
-        &#8827;
+        &gt;
         {% endif %}
         <a href="{{ site.baseurl }}{{ page_parent }}">
             {{parent_title}}
         </a>
-        &#8827;
+        &gt;
         {% endif %}
         {{ page.title }}
     </h1>
 
     <div class="grid-container">
         <div class="toc">
+
             <h3>
                 {% if page.toc_title %}
                 {{page.toc_title}}
