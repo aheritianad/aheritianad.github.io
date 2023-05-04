@@ -25,9 +25,8 @@ enumerate_grand_children: false
         {% if page_parent.size > 1 %}
         {% if page_grand_parent.size > 1 %}
         <a href="{{ site.baseurl }}{{ page_grand_parent }}">
-            ..
+            {% include svg-box-arrow-left.html %}
         </a>
-        &gt;
         {% endif %}
         <a href="{{ site.baseurl }}{{ page_parent }}">
             {{parent_title}}

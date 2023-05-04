@@ -8,10 +8,10 @@ layout: default
 
 <article class="post">
   <h1>
-    {{ page.title }}
     <a href="{{ site.baseurl }}{{ page_parent }}">
-      &#x2934;
+      {% include svg-box-arrow-left.html %}
     </a>
+    {{ page.title }}
   </h1>
 
   {% if page.youtube-video-id %}

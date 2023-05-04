@@ -27,27 +27,36 @@
         <table class="date-tags">
             <tr>
                 <td class="date">
+                    {% include svg-calendar-date.html %}
                     {{ post.date | date: "%b %e, %Y" }}
                 </td>
                 <td class="separator"><wbr></td>
                 <td class="tags">
                     {% if post.tags.size > 0%}
                     {% if post.tags.size > 1%}
-                    &#xf02c;
+                    {% include svg-tags.html %}
                     {% else%}
-                    &#xf02b;
+                    {% include svg-tag.html %}
                     {% endif %}
                     {% for tag in post.tags%}
-                    <a class="tag-instance">
+                    {% for post2 in site.posts%}
+                    {% if post2.layout == "root-directory" %}
+                    {% assign post2_url_array = post2.url|split:"/"%}
+                    {% assign post2_tag = post2_url_array[-1] %}
+                    {% if post2_tag == tag %}
+                    <a class="tag-instance" href="{{site.baseurl}}{{post2.url}}">
                         {{tag}}
                     </a>
-                    <!-- TODO add url -->
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
                     {% endfor %}
                     {% endif %}
                 </td>
             </tr>
         </table>
         {{ post.excerpt }}
+        <hr>
     </li>
     {% assign counter = counter + 1 %}
     {% endif %}
