@@ -1,10 +1,17 @@
 ---
 layout: default-notebook
 ---
+{% assign page_url_array = page.url|split:"/" %}
+{% assign page_url_popped = page_url_array|pop %}
+{% assign page_parent = page_url_popped|join:"/" %}
 
 <article class="page">
-
-  <h1>{{ page.title }}</h1>
+  <h1>
+    <a href="{{ site.baseurl }}{{ page_parent }}">
+      {% include svg-box-arrow-left.html %}
+    </a>
+    {{ page.title }}
+  </h1>
 
   <div class="entry">
     {{ content }}
