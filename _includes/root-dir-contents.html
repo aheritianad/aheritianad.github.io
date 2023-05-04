@@ -27,8 +27,11 @@
         <table class="date-tags">
             <tr>
                 <td class="date">
-                    {% include svg-calendar-date.html %}
-                    {{ post.date | date: "%b %e, %Y" }}
+                    {% assign post_day = post.date|date:"%e" %}
+                    {% assign post_day = post_day|split:" " %}
+                    {% assign post_day = ""|concat:post_day %}
+                    {% include svg-calendar-date.html param=post_day %}
+                    {{ post.date | date: "%b %Y" }}
                 </td>
                 <td class="separator"><wbr></td>
                 <td class="tags">
