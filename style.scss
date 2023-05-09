@@ -299,6 +299,7 @@ footer {
   grid-template-areas:
       'menu main main main';
   padding: 10px;
+  gap: 10px;
 
   @include mobile{
     gap: 0px;
