@@ -901,7 +901,7 @@
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>Oops! fail at 1-th attempt for x = -2486.
+            <pre>Oops! fail at 1-th attempt for x = -4998.
 </pre>
           </div>
         </div>
@@ -1027,7 +1027,7 @@
         <div class="jp-InputPrompt jp-InputArea-prompt">
         </div>
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-          <h5 id="Cesar">Cesar<a class="anchor-link" href="#Cesar">&#182;</a></h5>
+          <h5 id="Caesar">Caesar<a class="anchor-link" href="#Caesar">&#182;</a></h5>
         </div>
       </div>
     </div>
@@ -1059,8 +1059,8 @@
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">cesar_key</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">CesarKey</span><span class="o">.</span><span class="n">generate_key</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cesar_key</span><span class="p">)</span>
+              <pre><span></span><span class="n">caesar_key</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">CaesarKey</span><span class="o">.</span><span class="n">generate_key</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">caesar_key</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -1081,7 +1081,7 @@
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>CesarKey(2, -2)
+            <pre>CaesarKey(2)
 </pre>
           </div>
         </div>
@@ -1100,7 +1100,7 @@
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">crypto</span><span class="o">.</span><span class="n">CesarKey</span><span class="o">.</span><span class="n">compute_inverse</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+              <pre><span></span><span class="n">crypto</span><span class="o">.</span><span class="n">CaesarKey</span><span class="o">.</span><span class="n">compute_inverse</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -1142,7 +1142,7 @@
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">encr_cesar</span> <span class="o">=</span> <span class="n">cesar_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">clear_message</span><span class="p">)</span>
+              <pre><span></span><span class="n">encr_caesar</span> <span class="o">=</span> <span class="n">caesar_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">clear_message</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -1152,7 +1152,7 @@
 
 <span class="s2">Encrypted:</span>
 <span class="s2">========</span>
-<span class="si">{</span><span class="n">encr_cesar</span><span class="si">}</span><span class="s2"></span>
+<span class="si">{</span><span class="n">encr_caesar</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="p">)</span>
 </pre>
@@ -1202,7 +1202,7 @@ Vjku&#34;ku&#34;c&#34;engct&#34;oguucig&#34;vq&#34;gpet{rv&#34;cpf&#34;fget{rv0&
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">decr</span> <span class="o">=</span> <span class="n">cesar_key</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encr_cesar</span><span class="p">)</span>
+              <pre><span></span><span class="n">decr</span> <span class="o">=</span> <span class="n">caesar_key</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encr_caesar</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -1367,7 +1367,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>PermutationKey([3, 2, 1], [3, 2, 1])
+            <pre>PermutationKey([1, 3, 2], [1, 3, 2])
 </pre>
           </div>
         </div>
@@ -1426,7 +1426,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 Encrypted:
 ========
-ihTi sa slc raeem ass eg otcnepyra t dncedpyr .ta I ddihtt sm oekati ol egnr.
+Tihsi sa  lcera emsasg et oecnrpyta n ddcerpyt .Ia d dtihst om aek ti olnegr.
 
 </pre>
           </div>
@@ -1606,7 +1606,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#34;T|hpi[s- 7iGse +a&lt; 4c}lxeVarrq jmUeysQs&lt;aBg,eR {t$o+ Gekn/cmrWyCpNt% `a,n@dB /d$e8c&lt;rZyBp^t\n., [IB &#39;a\\d.dM Ht)hmiHsK ~t^of Tmda4k1eg NiytU lleojnWg ewrq.3&#34;</pre>
+            <pre>&#39;T;hViGss .ias, ga- Qc`lweHajr, =m!eNs)s%a%g^e% 4t8oM keMn%cQrnyYpztI &gt;a}n~d` 9dIeFc4rayEp[t:.{ &gt;I  oaCdSda It(h{i#sw 1tpo/ Sm2a/k1eJ 1i2tM jlnoUn6gMe=rI.K&#39;</pre>
           </div>
 
         </div>
@@ -1709,13 +1709,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">encr_noisy</span> <span class="o">=</span> <span class="n">cesar_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">noisy_message</span><span class="p">)</span>
-<span class="n">decr_noisy</span> <span class="o">=</span> <span class="n">cesar_key</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encr_noisy</span><span class="p">)</span>
+              <pre><span></span><span class="n">encr_noisy</span> <span class="o">=</span> <span class="n">caesar_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">noisy_message</span><span class="p">)</span>
+<span class="n">decr_noisy</span> <span class="o">=</span> <span class="n">caesar_key</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encr_noisy</span><span class="p">)</span>
 <span class="n">decr_without_noise</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">remove_noises</span><span class="p">(</span><span class="n">decr_noisy</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span>
     <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="se">\t\t</span><span class="s2">--- CESAR --</span>
+<span class="se">\t\t</span><span class="s2">--- CAESAR --</span>
 <span class="s2">Original:</span>
 <span class="s2">========</span>
 <span class="si">{</span><span class="n">clear_message</span><span class="si">}</span><span class="s2"></span>
@@ -1758,25 +1758,23 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
             <pre>
-		--- CESAR --
+		--- CAESAR --
 Original:
 ========
 This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 Noisy message:
 =============
-T|hpi[s- 7iGse +a&lt; 4c}lxeVarrq jmUeysQs&lt;aBg,eR {t$o+ Gekn/cmrWyCpNt% `a,n@dB /d$e8c&lt;rZyBp^t
-., [IB &#39;a\d.dM Ht)hmiHsK ~t^of Tmda4k1eg NiytU lleojnWg ewrq.3
+T;hViGss .ias, ga- Qc`lweHajr, =m!eNs)s%a%g^e% 4t8oM keMn%cQrnyYpztI &gt;a}n~d` 9dIeFc4rayEp[t:.{ &gt;I  oaCdSda It(h{i#sw 1tpo/ Sm2a/k1eJ 1i2tM jlnoUn6gMe=rI.K
 
 Noisy Encrypted:
 ===============
-V~jrk]u/&#34;9kIug&#34;-c&gt;&#34;6e	nzgXctts&#34;loWg{uSu&gt;cDi.gT&#34;}v&amp;q-&#34;Igmp1eotY{ErPv&#39;&#34;bc.pBfD&#34;1f&amp;g:e&gt;t\{Dr`v!0.&#34;]KD&#34;)c^f0fO&#34;Jv+jokJuM&#34;
-v`qh&#34;Vofc6m3gi&#34;Pk{vW&#34;nngqlpYi&#34;gyts05
+V=jXkIuu&#34;0kcu.&#34;ic/&#34;SebnygJclt.&#34;?o#gPu+u&#39;c&#39;i`g&#39;&#34;6v:qO&#34;mgOp&#39;eStp{[r|vK&#34;@c	p
+fb&#34;;fKgHe6tc{Gr]v&lt;0}&#34;@K&#34;&#34;qcEfUfc&#34;Kv*j}k%uy&#34;3vrq1&#34;Uo4c1m3gL&#34;3k4vO&#34;lnpqWp8iOg?tK0M
 
 Noisy Decrypted:
 ===============
-T|hpi[s- 7iGse +a&lt; 4c}lxeVarrq jmUeysQs&lt;aBg,eR {t$o+ Gekn/cmrWyCpNt% `a,n@dB /d$e8c&lt;rZyBp^t
-., [IB &#39;a\d.dM Ht)hmiHsK ~t^of Tmda4k1eg NiytU lleojnWg ewrq.3
+T;hViGss .ias, ga- Qc`lweHajr, =m!eNs)s%a%g^e% 4t8oM keMn%cQrnyYpztI &gt;a}n~d` 9dIeFc4rayEp[t:.{ &gt;I  oaCdSda It(h{i#sw 1tpo/ Sm2a/k1eJ 1i2tM jlnoUn6gMe=rI.K
 
 Cleaned Decrypted:
 =================
@@ -1856,18 +1854,15 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 Noisy message:
 =============
-T|hpi[s- 7iGse +a&lt; 4c}lxeVarrq jmUeysQs&lt;aBg,eR {t$o+ Gekn/cmrWyCpNt% `a,n@dB /d$e8c&lt;rZyBp^t
-., [IB &#39;a\d.dM Ht)hmiHsK ~t^of Tmda4k1eg NiytU lleojnWg ewrq.3
+T;hViGss .ias, ga- Qc`lweHajr, =m!eNs)s%a%g^e% 4t8oM keMn%cQrnyYpztI &gt;a}n~d` 9dIeFc4rayEp[t:.{ &gt;I  oaCdSda It(h{i#sw 1tpo/ Sm2a/k1eJ 1i2tM jlnoUn6gMe=rI.K
 
 Noisy Encrypted:
 ===============
-h|T[ip -sGi7 es&lt;a+c4 xl}aVeqrrmj yeUsQsBa&lt;e,g{ Ro$tG +nkemc/yWrNpC %t,a`d@n/ Be$d&lt;c8yZr^pB.
-t[ , BI\a&#39;d.dH Mh)tHim Ks^t~ fodmTk4age1iN Utyll joegWnwe .qr3
+Th;VGis s.ais ,g-a cQ`wleaHj,r m=!Ness)%%age^%4 to8Mk enM%QcrynYzpt I&gt;}and~`9 deIF4cryaE[pt.:{&gt; I  oCaddSaI th({#is w1pto /S2mak/1Je i12Mt ljnUong6M=er.IK
 
 Noisy Decrypted:
 ===============
-T|hpi[s- 7iGse +a&lt; 4c}lxeVarrq jmUeysQs&lt;aBg,eR {t$o+ Gekn/cmrWyCpNt% `a,n@dB /d$e8c&lt;rZyBp^t
-., [IB &#39;a\d.dM Ht)hmiHsK ~t^of Tmda4k1eg NiytU lleojnWg ewrq.3
+T;hViGss .ias, ga- Qc`lweHajr, =m!eNs)s%a%g^e% 4t8oM keMn%cQrnyYpztI &gt;a}n~d` 9dIeFc4rayEp[t:.{ &gt;I  oaCdSda It(h{i#sw 1tpo/ Sm2a/k1eJ 1i2tM jlnoUn6gMe=rI.K
 
 Cleaned Decrypted:
 =================
@@ -1940,7 +1935,6 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
           <h5 id="Rivest%E2%80%93Shamir%E2%80%93Adleman-aka-RSA">Rivest&#8211;Shamir&#8211;Adleman aka RSA<a
               class="anchor-link" href="#Rivest%E2%80%93Shamir%E2%80%93Adleman-aka-RSA">&#182;</a></h5>
-          <p>(<a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem))">wikipedia</a></p>
 
         </div>
       </div>
@@ -1998,7 +1992,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">rsa_key</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAPairKeys</span><span class="o">.</span><span class="n">generate_pairs</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+              <pre><span></span><span class="n">rsa_key</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAPairKeys</span><span class="o">.</span><span class="n">generate_pairs</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rsa_key</span><span class="p">)</span>
 </pre>
             </div>
@@ -2020,7 +2014,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>RSAPairKeys((7313, 4997), HIDDEN_KEY)
+            <pre>RSAPairKeys((34823, 12917), HIDDEN_KEY)
 </pre>
           </div>
         </div>
@@ -2063,7 +2057,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>((7313, 4997), (7313, 713))</pre>
+            <pre>((34823, 12917), (34823, 9629))</pre>
           </div>
 
         </div>
@@ -2106,7 +2100,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;/8Q&amp;j&gt;&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;-z0NOf&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;- OcF\\&#34;&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;2\\&#34;gyi[&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;D[_\\niH&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;*t]H!\&#39;&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;,@d_hq&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;D[I[nX&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;-f)$k;&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;8QgG-O&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;D[Kbx7&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;Foo\&#39;r&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;*tQXs &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;$9@Ab(&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;G&lt;qgCv&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;\\nKd&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
+            <pre>&#39;2\\vjTt&lt;$(l`\n&#34;1}@0&lt;&amp;D`rzgIT+Ses;6&lt;pl0^Rf&lt;+|w|$tDj+3YJ@&#34;`84(2X`M5Fk_\&#39;&gt;4Q(n79(UB$&#39;</pre>
           </div>
 
         </div>
@@ -2149,197 +2143,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;This &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;is a &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;clear&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt; mess&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;age t&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;o enc&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;rypt &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;and d&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;ecryp&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;t. I &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;add t&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;his t&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;o mak&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;e it &lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;longe&lt;/rsachunkrsa&gt;&#34;,\n&#34;&lt;rsachunkrsa&gt;r.&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="kn">from</span> <span class="nn">bcbcpy.crypto</span> <span class="kn">import</span> <span class="n">read_from_rsa</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">encr_rsa</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;/8Q&amp;j&gt;-z0NOf- OcF&#34;2&#34;gyi[D[_\niH*t]H!\&#39;,@d_hqD[I[nX-f)$k;8QgG-OD[Kbx7Foo\&#39;r*tQXs $9@Ab(G&lt;qgCv\nKd&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">decr_rsa</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
             <pre>&#39;This is a clear message to encrypt and decrypt. I add this to make it longer.&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">rsa_key</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAPairKeys</span><span class="o">.</span><span class="n">generate_pairs</span><span class="p">()</span>
-<span class="n">encr_rsa</span> <span class="o">=</span> <span class="n">rsa_key</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">clear_message</span><span class="p">)</span>
-<span class="n">encr_rsa</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;=#_GmL)M6SsjvN*{G(oK(czX9f`Nr$7:m~) !W1=evK\\n\\tz2!leC\\\\fHWw7-sTkvQ9ATd^/:i|RQ{WS*&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">decr_rsa</span> <span class="o">=</span> <span class="n">rsa_key</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encr_rsa</span><span class="p">)</span>
-<span class="n">decr_rsa</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;This is a clear message to encrypt and decrypt. I add this to make it longer.&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
           </div>
 
         </div>
@@ -2428,9 +2232,12 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
         <div class="jp-InputPrompt jp-InputArea-prompt">
         </div>
         <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <p>The following image summarizes the above processes.</p>
           <p style="text-align: center;">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg">
           </p>
+          <p>[<a href="https://upload.wikimedia.org/wikipedia/commons/4/46/Diffie-Hellman_Key_Exchange.svg">source:
+              wikimedia</a>]</p>
 
         </div>
       </div>
@@ -2458,7 +2265,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2508,7 +2315,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2554,7 +2361,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2573,7 +2380,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2596,13 +2403,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;user_87224&#39;</pre>
+            <pre>&#39;user_147168&#39;</pre>
           </div>
 
         </div>
@@ -2617,7 +2424,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2638,13 +2445,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&lt;bcbcpy.node.Node at 0x107319d50&gt;</pre>
+            <pre>&lt;bcbcpy.node.Node at 0x110069b70&gt;</pre>
           </div>
 
         </div>
@@ -2659,7 +2466,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2680,7 +2487,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2703,13 +2510,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>Alice : RSAPairKeys((7313, 4349), HIDDEN_KEY)</pre>
+            <pre>Alice : RSAPairKeys((33491, 24511), HIDDEN_KEY)</pre>
           </div>
 
         </div>
@@ -2724,7 +2531,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2747,13 +2554,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>Bob : RSAPairKeys((7313, 2557), HIDDEN_KEY)</pre>
+            <pre>Bob : RSAPairKeys((34553, 11981), HIDDEN_KEY)</pre>
           </div>
 
         </div>
@@ -2768,7 +2575,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2791,13 +2598,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>user_518690 : RSAPairKeys((7313, 4877), HIDDEN_KEY)</pre>
+            <pre>user_518397 : RSAPairKeys((52109, 27097), HIDDEN_KEY)</pre>
           </div>
 
         </div>
@@ -2825,7 +2632,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2849,15 +2656,12 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
               <pre><span></span><span class="n">cipher</span> <span class="o">=</span> <span class="n">sender</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plain_message</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">cipher</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+<span class="n">cipher</span>
 </pre>
             </div>
 
@@ -2874,13 +2678,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#34;Fy|R5/pTP&amp;v{ktMTfht8 Q&amp;GG_|2^wU0o\\!*{U8DZYb,7,/8C 2Z$k1&#39;;3b=Wg-:kBC5EN,wE~#W&#34;</pre>
+            <pre>&#39;\nF}\taJRY8^P\n]Fn:lQ[sq[M6r&#34;3Qs8]=p\\u= D&gt;=K&#34;Z2~rU&#34;PuF?76hI+13YDws.CcCaNRJ\&#39;doS3&amp;`&#39;</pre>
           </div>
 
         </div>
@@ -2895,14 +2699,11 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+              <pre><span></span><span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -2919,7 +2720,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
 
 
 
@@ -2966,7 +2767,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -2985,14 +2786,11 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hacker</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -3009,13 +2807,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;81/nJ(+44o1O,!&gt;8ge4$3($J&amp;P}L%)x|R.]Yd{,V;OS-?LJ~&gt;\\&lt;wa6c!uZ-iNzqeN`DN4YNr,]&gt;t&#39;</pre>
+            <pre>&#34;!Dkjlsz&amp;5MDl)%M^HZ$!}]&amp;&#39;`p(@Vn/7aC$NQ8A2VN\thRw]pXwv-Dl &#39;&gt;[lO6)z,q&amp;_r &#39;6mi$;l]n6&#34;</pre>
           </div>
 
         </div>
@@ -3030,14 +2828,11 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -3054,13 +2849,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;7Pq.pCdQ:57;aTz =x o%,m%Vmo\n54Z3 :.VK)FgNjr!n0CK3i/0/0$tZ3XcE_vzMA9A3TX:&amp;\\OC&#39;</pre>
+            <pre>&#34;&#39;k@u?z^Bf{[&#39;(Z`~&amp;L5\n,[ui}rrZ&amp;]/HwE}#1.d,2h\nh#1V6cxVg;7L(i0d/y1txP(POq+Q) 89;q9&#34;</pre>
           </div>
 
         </div>
@@ -3089,7 +2884,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3104,25 +2899,45 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
     </div>
 
   </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">receiver_pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="c1"># out</span>
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">receiver_pub</span><span class="p">)</span>
 </pre>
             </div>
 
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;Hello Bob! This is Alice. Please send me $1000 to this account: (1234567890)&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
   </div>
@@ -3144,7 +2959,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3165,15 +2980,12 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
               <pre><span></span><span class="n">scam_cipher</span><span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">scam_message</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">scam_cipher</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+<span class="n">scam_cipher</span>
 </pre>
             </div>
 
@@ -3190,13 +3002,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#34;Fy|R5/pTP&amp;v{ktMTfht8 Q&amp;GG_|2^wU0o\\!*{U8DZYb,7,/8C 2Z$k1&#39;;3b=Wg-:mQx[]G@kD1B-&#34;</pre>
+            <pre>&#39;\nF}\taJRY8^P\n]Fn:lQ[sq[M6r&#34;3Qs8]=p\\u= D&gt;=K&#34;Z2~rU&#34;PuF?76hI+13YDws.CcI:;X{j+&amp;X&lt;&lt;r&#39;</pre>
           </div>
 
         </div>
@@ -3211,15 +3023,11 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">scam_cipher</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+              <pre><span></span><span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">scam_cipher</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -3236,7 +3044,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
 
 
 
@@ -3299,7 +3107,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3320,7 +3128,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
 
 
 
@@ -3341,7 +3149,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3364,13 +3172,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;\\&#34;Psc\\t23&amp;Fm(\\&#34;OQU7NGZLu\\nIz7;i?\\\\F;&lt;bmR\\n+%@l!0iR7\\&#34;&amp;qZ&amp;?V`+f~8+v\\n]FAPKnZh\\t=7sbE8f&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
+            <pre>&#39;/&gt;?E1(V\tiR!aS%S)R6ZZA*0^paZkKOSDiI,p@gN[.j+WqQtp&gt;7bl\\v_1Wy3\n:@\n(hLp8N(\nb/4Cq%B&#39;</pre>
           </div>
 
         </div>
@@ -3385,7 +3193,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3409,13 +3217,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;AyXdWqrk+0k4iuX2+t8eA&amp;w)v3m,u0rp[@+x)?Ab@LJ?ptw\\nIFs]uzYrT8\\\\Ss3o:v_QuE(6,s%e&gt;&amp;[7S6JC.&gt;~Jv_lHnfa{XHl*8\\&#34;!J w{b\\n0qp$^a2N0F\&#39;D#%1Nx\\n$gQ:o\\n}kqW\\n[jsE]c&amp;\\&#34;(8G?lGS&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
+            <pre>&#39;e8#&lt;)CbbI55\&#39;7]zJuj\tC21!&amp;t81&gt;&#34;&amp;u&lt;!7#O9DK|Px3:ML6J)kB]6F&gt;nfd]LD#(k*:8y?WkX6doR@&lt;5Xo81A&#34;%#w/D$:Y4i7?i^M.i(01Fwpb!@*iV=`?WP[ozb1UfskPrh,TCCl]:BSTCLJ8+86B&gt;W#X&#39;</pre>
           </div>
 
         </div>
@@ -3443,7 +3251,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3464,7 +3272,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
 
 
 
@@ -3485,7 +3293,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3506,7 +3314,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
 
 
 
@@ -3527,7 +3335,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3549,13 +3357,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;NoIsYnOiSy[\n&#34;&lt;rsachunkrsa&gt;D-i^ko\\&#34;\\&#34;9&amp;`f=9hr-NW{Fq/)g|Aaf9Lq-f]J@{5}|P0WEguAE,:r,]eOHR@sD-HnFZU~AgH AUXk\\&#34;Cv0XB ~f9a2AWs;FRcc`-D\\\\:y{$iH!@u@NsUlMug*NQ|Ee\\\\jkjF6T@i3j0sUvNU%9YQG/dx&lt;H{2&lt;/rsachunkrsa&gt;&#34;\n]NoIsYnOiSy&#39;</pre>
+            <pre>&#39;NoIsYnOiSy8QoP!S/SactnrIf3VE89\tc-c&amp;F#;N`iWj|3v&#34;%A6&lt;#T}YB9[[n&gt;RBHIxSQRa~uSR?&gt;gRW%_IJPr3CooA!ad}&#34;5~^_WJFy:\\gFoI0B8,$g&lt;Va\n4}I9&#34;b\n1[PfpEBV&gt;]8@zw64| \&#39;%V!&gt;ylGe6mD_&#34;\njH,ONoIsYnOiSy&#39;</pre>
           </div>
 
         </div>
@@ -3570,7 +3378,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3591,13 +3399,13 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;[\n&#34;&lt;rsachunkrsa&gt;D-i^ko\\&#34;\\&#34;9&amp;`f=9hr-NW{Fq/)g|Aaf9Lq-f]J@{5}|P0WEguAE,:r,]eOHR@sD-HnFZU~AgH AUXk\\&#34;Cv0XB ~f9a2AWs;FRcc`-D\\\\:y{$iH!@u@NsUlMug*NQ|Ee\\\\jkjF6T@i3j0sUvNU%9YQG/dx&lt;H{2&lt;/rsachunkrsa&gt;&#34;\n]&#39;</pre>
+            <pre>&#39;8QoP!S/SactnrIf3VE89\tc-c&amp;F#;N`iWj|3v&#34;%A6&lt;#T}YB9[[n&gt;RBHIxSQRa~uSR?&gt;gRW%_IJPr3CooA!ad}&#34;5~^_WJFy:\\gFoI0B8,$g&lt;Va\n4}I9&#34;b\n1[PfpEBV&gt;]8@zw64| \&#39;%V!&gt;ylGe6mD_&#34;\njH,O&#39;</pre>
           </div>
 
         </div>
@@ -3612,7 +3420,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3633,7 +3441,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
 
 
 
@@ -3681,16 +3489,12 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
               <pre><span></span><span class="n">signed_message</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">)</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">signed_message</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span> <span class="c1"># remove signature</span>
-
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+<span class="n">receiver</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">signed_message</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span> <span class="c1"># remove signature</span>
 </pre>
             </div>
 
@@ -3707,7 +3511,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
 
 
 
@@ -3728,14 +3532,12 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
               <pre><span></span><span class="n">signed_message_with_noise</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher_signed_with_noise</span><span class="p">)</span>
 <span class="n">message_with_noise</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">signed_message_with_noise</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span> <span class="c1"># unsign</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">message_with_noise</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">message_with_noise</span><span class="p">)</span>
 <span class="n">utils</span><span class="o">.</span><span class="n">remove_noises</span><span class="p">(</span><span class="n">message_with_noise</span><span class="p">)</span>
 </pre>
             </div>
@@ -3753,7 +3555,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
 
 
 
@@ -3774,7 +3576,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3783,9 +3585,6 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 <span class="n">signed_message_with_noise</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">trimmed_cipher_signed_with_noise</span><span class="p">)</span>
 <span class="n">message_with_noise</span> <span class="o">=</span> <span class="n">receiver</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">signed_message_with_noise</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span> <span class="c1"># unsign</span>
 
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">message_with_noise</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">message_with_noise</span><span class="p">)</span>
-    
 <span class="n">utils</span><span class="o">.</span><span class="n">remove_noises</span><span class="p">(</span><span class="n">message_with_noise</span><span class="p">)</span>
 </pre>
             </div>
@@ -3803,7 +3602,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[69]:</div>
 
 
 
@@ -3837,7 +3636,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3858,7 +3657,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
 
 
 
@@ -3879,7 +3678,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3900,7 +3699,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
 
 
 
@@ -3921,7 +3720,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -3942,7 +3741,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
 
 
 
@@ -3989,14 +3788,221 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[73]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;&#34;a0\t-&lt;}Y3Wkm\&#39;b30v&amp;eDg9ueN{90tk,|qEyNki x!n0Q%?\n:VED$4z&gt;+oNFW(Y}9]1*AV.9F9~Vlr/P&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;}q_p1OA\&#39;[&amp;d)s%:iq*?C#FDY=nY[k^ve$Obs]E$I6n&gt;$5mv!P(}+cV\&#39;1#]{!ktc_YV1&#34;_l_]\\laYXnt&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;0\nfaATRsh&#34;14~IR;,BQ}7kPhpPYn%L$JnrJInJ:U@(iT=e\\@K_Xo}S#w(gjf]zZY&lt;h!\\6\&#39;\&#39;*4#\nhn\&#39;&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">sends</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_to</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[76]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;W&#34;v?G]wpS}vlZL\tTHUj8\&#39;G)!b&gt;I#x*-M;W#;kZ/J9Q0D.2,uxr9u!XAz~ ja:u/R{0ep 10&amp;\&#39;\tPxgVCr&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">gets</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_from</span><span class="o">=</span><span class="n">sender</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[77]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;\n1&gt;02Wvd|#v|,B)\n;[:TqLMKaG&gt;=N|qa*W%$SaO|&#34;Wv%&lt;)D0\t:0]hv1}xu:`Qc:k\&#39;A3+-|et,wLnsCF&amp;&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
         <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hacker</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">gets</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_from</span><span class="o">=</span><span class="n">bob</span><span class="p">)</span>
 </pre>
             </div>
 
@@ -4019,227 +4025,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;)R@Ik:;sEWj.\&#39;E#fv\\8jtYW|&amp;e6lJ&#34;4kMY&amp;2S&#34;le5COj\nEB!t!=W5;]y-Z`PuzYt3(nH)6Ljt)d1&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">hacker</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#34;Fy|R5/pTP&amp;v{ktMTfht8 Q&amp;GG_|2^wU0o\\!*{U8DZYb,7,/8C 2Z$k1&#39;;3b=Wg-:kBC5EN,wE~#W&#34;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#34;0y[P#&amp;f(A?J5iNF\\d/Mx1VzZ*v^.vA&lt;,gY-E{mqcX1~KYA#6y{brJ2Fq$-\t2yPqPq]0&#39;+;~=~NPf&#34;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">out</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">sends</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_to</span><span class="o">=</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;$nni2V!kcm9 x} &#34;\&#39;%lgM:M&#34;S^m&lt;^&lt;C~`o:08ad\n+{Q\n?S0`Pfcg6[nattT|[s6M9xic1d&amp;;!s/3&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">gets</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_from</span><span class="o">=</span><span class="n">sender</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;81/nJ(+44o1O,!&gt;8ge4$3($J&amp;P}L%)x|R.]Yd{,V;OS-?LJ~&gt;\\&lt;wa6c!uZ-iNzqeN`DN4YNr,]&gt;t&#39;</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">hacker</span><span class="o">.</span><span class="n">gets</span><span class="p">(</span><span class="n">cipher_signed</span><span class="p">,</span> <span class="n">_from</span><span class="o">=</span><span class="n">bob</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[83]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;$nni2V!kcm9 x} &#34;\&#39;%lgM:M&#34;S^m&lt;^&lt;C~`o:08ad\n+{Q\n?S0`Pfcg6[nattT|[s6M9xic1d&amp;;!s/3&#39;</pre>
+            <pre>&#39;W&#34;v?G]wpS}vlZL\tTHUj8\&#39;G)!b&gt;I#x*-M;W#;kZ/J9Q0D.2,uxr9u!XAz~ ja:u/R{0ep 10&amp;\&#39;\tPxgVCr&#39;</pre>
           </div>
 
         </div>
@@ -4267,7 +4053,7 @@ This is a clear message to encrypt and decrypt. I add this to make it longer.
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4324,7 +4110,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4347,13 +4133,13 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;A2^zvkWvZiAbm5HN]EvSgPZj:)H5PJ*E\\/~:_C-gF\n.u*dwFNz\\kBSqSS05+z/Xs`cMdDVb1hv=!&#39;</pre>
+            <pre>&#39;&#34;b&lt;p-vdWDV&amp;vIO!TJ6&lt;g[ZhkP]{E/\t{f3l_vXxGSkbl^W&gt;~T5d%sFkR9$I_9SYwC ,@Nq&amp;YqdS84rY&#39;</pre>
           </div>
 
         </div>
@@ -4368,7 +4154,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4391,13 +4177,13 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[81]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;2`l0P/F`S&#34;[V#|%X3mFXF}UJIpcEDX\\Y`hRyhbqD\\5eF5mhE=5`!j:scwN0&gt;HwBv}(`&amp;uvg=sEfW&#39;</pre>
+            <pre>&#39;}oZ:l2}zfz6\nWew!t_ \&#39;4WR`P=06v))o-3:DTE#&amp;,[}&gt;KDCK}+)&#34;+1i6lAE+ewaSR:uyP1Ly(&gt;K_H1+&#39;</pre>
           </div>
 
         </div>
@@ -4412,7 +4198,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4435,13 +4221,13 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[87]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[82]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;7} t%&lt;|l}&lt;F_&#34;q#m+ZtHQsX.Rv{e]U\\T|iF5(:s\&#39;6X6{|*N{90kqr3vV\&#39;i!C#y9}a&gt;gFLP&gt;AUWnt&#39;</pre>
+            <pre>&#39;\n8I/suNK:OD^+zEn B|J;Fl?`PC_+]c=MPnR-`nnwh \ta/qO!.;pQs3?+;\&#39;C&lt;WH!@7&#34;:,v\&#39;sD]4M5F&#39;</pre>
           </div>
 
         </div>
@@ -4469,7 +4255,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4477,11 +4263,8 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 <span class="n">fake_signed_scam</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">scam_message</span><span class="p">,</span> <span class="n">leaked_sender_priv</span><span class="p">)</span>
 <span class="n">cipher_fake_signed_scam</span> <span class="o">=</span> <span class="n">hacker</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">fake_signed_scam</span><span class="p">,</span> <span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="n">out</span> <span class="o">=</span> <span class="n">cipher_fake_signed_scam</span>
 
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">receiver</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
-<span class="n">out</span>
+<span class="n">cipher_fake_signed_scam</span>
 </pre>
             </div>
 
@@ -4498,13 +4281,13 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[83]:</div>
 
 
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>&#39;&#34;Psc\t23&amp;Fm(&#34;OQU7NGZLu\nIz7;i?\\F;&lt;bmR\n+%@l!0iR7&#34;&amp;qZ&amp;?V`+f~8+v\n]FAPNq#mb@/F#vNW&#39;</pre>
+            <pre>&#39;/&gt;?E1(V\tiR!aS%S)R6ZZA*0^paZkKOSDiI,p@gN[.j+WqQtp&gt;7bl\\v_1Wy3\n:@\n(hLoC5Fg}LGD|Dw&#39;</pre>
           </div>
 
         </div>
@@ -4519,7 +4302,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4540,7 +4323,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[84]:</div>
 
 
 
@@ -4574,7 +4357,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4684,7 +4467,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4716,7 +4499,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4735,7 +4518,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[88]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4756,7 +4539,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[93]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[88]:</div>
 
 
 
@@ -4777,7 +4560,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4798,7 +4581,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[94]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
 
 
 
@@ -4819,7 +4602,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4840,7 +4623,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[95]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[90]:</div>
 
 
 
@@ -4879,7 +4662,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4901,7 +4684,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[96]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[91]:</div>
 
 
 
@@ -4927,7 +4710,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4948,7 +4731,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[92]:</div>
 
 
 
@@ -4969,7 +4752,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[93]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -4991,7 +4774,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[98]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[93]:</div>
 
 
 
@@ -5017,7 +4800,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5038,7 +4821,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[94]:</div>
 
 
 
@@ -5059,7 +4842,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5081,7 +4864,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[100]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[95]:</div>
 
 
 
@@ -5107,7 +4890,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5129,7 +4912,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[101]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[96]:</div>
 
 
 
@@ -5155,7 +4938,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5178,7 +4961,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[102]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
 
 
 
@@ -5204,7 +4987,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[98]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5227,7 +5010,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[103]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[98]:</div>
 
 
 
@@ -5239,6 +5022,239 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
     &#34;data&#34;: &#34;fifth block&#34;,
     &#34;nonce&#34;: 34705
 }</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(True, True, True, True, True)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h3 id="Making-some-change-in-past-data">Making some change in past data<a class="anchor-link"
+              href="#Making-some-change-in-past-data">&#182;</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[100]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;not third data&quot;</span>
+<span class="n">third_block</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[100]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>{
+    &#34;prev_hash&#34;: &#34;0000f1a7cc9b3335858fdc615b274e07568931de65e82fb991ac257e168b89c1&#34;,
+    &#34;hash&#34;: &#34;66ad1a8ee995ddbcaaf131585222c10a396a960f0c441578d5613417fa5d107a&#34;,
+    &#34;data&#34;: &#34;not third data&#34;,
+    &#34;nonce&#34;: 2917
+}</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[101]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(True, True, False, False, False)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[102]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;third data&quot;</span>
+<span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[102]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(True, True, True, True, True)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;not third data&quot;</span>
+<span class="n">third_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[103]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>True</pre>
           </div>
 
         </div>
@@ -5280,7 +5296,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>(True, True, True, True, True)</pre>
+            <pre>(True, True, True, False, False)</pre>
           </div>
 
         </div>
@@ -5289,20 +5305,6 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
     </div>
 
-  </div>
-  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">
-        </div>
-        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-          <h3 id="Making-some-change-in-past-data">Making some change in past data<a class="anchor-link"
-              href="#Making-some-change-in-past-data">&#182;</a></h3>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
@@ -5313,8 +5315,9 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;not third data&quot;</span>
-<span class="n">third_block</span>
+              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;third data&quot;</span>
+<span class="n">third_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
+<span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
 </pre>
             </div>
 
@@ -5332,226 +5335,6 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
           <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[105]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>{
-    &#34;prev_hash&#34;: &#34;0000f1a7cc9b3335858fdc615b274e07568931de65e82fb991ac257e168b89c1&#34;,
-    &#34;hash&#34;: &#34;66ad1a8ee995ddbcaaf131585222c10a396a960f0c441578d5613417fa5d107a&#34;,
-    &#34;data&#34;: &#34;not third data&#34;,
-    &#34;nonce&#34;: 2917
-}</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[106]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[106]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>(True, True, False, False, False)</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[107]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;third data&quot;</span>
-<span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[107]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>(True, True, True, True, True)</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[108]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;not third data&quot;</span>
-<span class="n">third_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
-<span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[108]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>True</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[109]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[109]:</div>
-
-
-
-
-          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-            <pre>(True, True, True, False, False)</pre>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">third_block</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;third data&quot;</span>
-<span class="n">third_block</span><span class="o">.</span><span class="n">mine</span><span class="p">()</span>
-<span class="n">init_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">second_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">third_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">forth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(),</span> <span class="n">fifth_block</span><span class="o">.</span><span class="n">is_valid</span><span class="p">()</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[110]:</div>
 
 
 
@@ -5616,7 +5399,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[106]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5637,7 +5420,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[111]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[106]:</div>
 
 
 
@@ -5663,7 +5446,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[112]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[107]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5689,7 +5472,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[112]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[107]:</div>
 
 
 
@@ -5728,7 +5511,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[108]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5751,7 +5534,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[113]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[108]:</div>
 
 
 
@@ -5786,64 +5569,68 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       </div>
     </div>
   </div>
-  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">
-        </div>
-        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-          <div class="highlight">
-            <pre><span></span><span class="n">root_chain</span><span class="o">.</span><span class="n">add_block</span><span class="p">(</span>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[109]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">root_chain</span><span class="o">.</span><span class="n">add_block</span><span class="p">(</span>
   <span class="n">new_block</span>
 <span class="p">)</span>
 </pre>
-          </div>
+            </div>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
       </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">
-        </div>
-        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-          <hr />
-          <div class="highlight">
-            <pre><span></span>---------------------------------------------------------------------------
- AssertionError                            Traceback <span class="o">(</span>most recent call last<span class="o">)</span>
- /var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_26354/943714534.py <span class="k">in</span> &lt;cell line: <span class="m">1</span>&gt;<span class="o">()</span>
- ----&gt; <span class="m">1</span> root_chain.add_block<span class="o">(</span>
-       <span class="m">2</span>     new_block
-       <span class="m">3</span> <span class="o">)</span>
 
- ~/Desktop/BootCamp-BlockChain-and-Python/src/bcbcpy/blockchain/chain.py <span class="k">in</span> add_block<span class="o">(</span>self, block<span class="o">)</span>
-      <span class="m">26</span>             self.last_block is block.prev_block
-      <span class="m">27</span>         <span class="o">)</span>, <span class="s2">&quot;Incompatible block to the head block of the chain.&quot;</span>
- ---&gt; <span class="m">28</span>         assert block.is_valid<span class="o">()</span>, <span class="s2">&quot;Block is not valid.&quot;</span>
-      <span class="m">29</span>         self.last_block <span class="o">=</span> block
-      <span class="m">30</span> 
 
- AssertionError: Block is not valid.
-</pre>
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+            <pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AssertionError</span>                            Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_27212/2453956519.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> root_chain.add_block(
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>   new_block
+<span class="ansi-green-intense-fg ansi-bold">      3</span> )
+
+<span class="ansi-green-fg">~/Desktop/BootCamp-BlockChain-and-Python/src/bcbcpy/blockchain/chain.py</span> in <span class="ansi-cyan-fg">add_block</span><span class="ansi-blue-fg">(self, block)</span>
+<span class="ansi-green-intense-fg ansi-bold">     48</span>             self<span class="ansi-blue-fg">.</span>last_block <span class="ansi-green-fg">is</span> block<span class="ansi-blue-fg">.</span>prev_block
+<span class="ansi-green-intense-fg ansi-bold">     49</span>         ), &#34;Incompatible block to the head block of the chain.&#34;
+<span class="ansi-green-fg">---&gt; 50</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">assert</span> block<span class="ansi-blue-fg">.</span>is_valid<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Block is not valid.&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     51</span>         self<span class="ansi-blue-fg">.</span>last_block <span class="ansi-blue-fg">=</span> block
+<span class="ansi-green-intense-fg ansi-bold">     52</span>         self<span class="ansi-blue-fg">.</span>_length <span class="ansi-blue-fg">+=</span> <span class="ansi-cyan-fg">1</span>
+
+<span class="ansi-red-fg">AssertionError</span>: Block is not valid.</pre>
           </div>
-          <hr />
-
         </div>
+
       </div>
+
     </div>
+
   </div>
   <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
     <div class="jp-Cell-inputWrapper">
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[114]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5865,7 +5652,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[114]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[110]:</div>
 
 
 
@@ -5891,7 +5678,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[115]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5912,7 +5699,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[112]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5933,7 +5720,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[116]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[112]:</div>
 
 
 
@@ -5963,7 +5750,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[113]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -5985,7 +5772,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[117]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[113]:</div>
 
 
 
@@ -6024,7 +5811,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[114]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6056,7 +5843,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[115]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6092,7 +5879,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[120]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[116]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6113,7 +5900,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[117]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6135,7 +5922,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[118]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6164,7 +5951,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>{&#39;timestamp&#39;: &#39;2023-05-04T03:18:29.299250&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;[\n&#34;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE\\t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;\\n^ca+\\t&gt;pwDOZ05oU6iT&amp;jz_I.}yte\\t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;&#34;\n]&#39;}
+            <pre>{&#39;timestamp&#39;: &#39;2023-05-09T22:01:00.655549&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y\\BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;\\q)V&amp;8Iet~&lt;J{4|K*j%P&#34;J\tY5Bm\toAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P&#39;}
 </pre>
           </div>
         </div>
@@ -6192,7 +5979,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[119]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6214,7 +6001,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[119]:</div>
 
 
 
@@ -6222,8 +6009,8 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
             <pre>{
     &#34;prev_hash&#34;: &#34;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#34;,
-    &#34;hash&#34;: &#34;65222279c494ce87948c3fd34ee3b37436b482a9a0145252baf502d208aec57e&#34;,
-    &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;2023-05-04T03:18:29.299250&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;[\\n\&#34;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE\\\\t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;\\\\n^ca+\\\\t&gt;pwDOZ05oU6iT&amp;jz_I.}yte\\\\t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;\&#34;\\n]&#39;}&#34;,
+    &#34;hash&#34;: &#34;5fa1e4b30e322577ffe63903a4f0bbc7b5a0646342ef6fac02b1ddc076e306b9&#34;,
+    &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;2023-05-09T22:01:00.655549&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y\\\\BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;\\\\q)V&amp;8Iet~&lt;J{4|K*j%P\&#34;J\\tY5Bm\\toAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P&#39;}&#34;,
     &#34;nonce&#34;: 0
 }</pre>
           </div>
@@ -6267,7 +6054,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[124]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[121]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6294,7 +6081,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>{&#39;timestamp&#39;: &#39;2023-05-04T03:18:29.299250&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;[\n&#34;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE\\t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;\\n^ca+\\t&gt;pwDOZ05oU6iT&amp;jz_I.}yte\\t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;&#34;\n]&#39;}
+            <pre>{&#39;timestamp&#39;: &#39;2023-05-09T22:01:00.655549&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y\\BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;\\q)V&amp;8Iet~&lt;J{4|K*j%P&#34;J\tY5Bm\toAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P&#39;}
 </pre>
           </div>
         </div>
@@ -6309,56 +6096,11 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[125]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[122]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="k">raise</span> <span class="ne">Warning</span><span class="p">(</span><span class="s2">&quot;Sender confirmation below needs to be set manually due to dirty rsa output&quot;</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-            <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">Warning</span>                                   Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_13998/1177164807.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span> Warning<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Sender confirmation below needs to be set manually due to dirty rsa output&#34;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">Warning</span>: Sender confirmation below needs to be set manually due to dirty rsa output</pre>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[126]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">sender_confirmation</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;[</span><span class="se">\n</span><span class="s2">&quot;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE</span><span class="se">\\</span><span class="s2">t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;</span><span class="se">\\</span><span class="s2">n^ca+</span><span class="se">\\</span><span class="s2">t&gt;pwDOZ05oU6iT&amp;jz_I.}yte</span><span class="se">\\</span><span class="s2">t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;&quot;</span><span class="se">\n</span><span class="s2">]&quot;&quot;&quot;</span> 
+              <pre><span></span><span class="n">sender_confirmation</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y</span><span class="se">\\</span><span class="s2">BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;</span><span class="se">\\</span><span class="s2">q)V&amp;8Iet~&lt;J{4|K*j%P&quot;J</span><span class="se">\t</span><span class="s2">Y5Bm</span><span class="se">\t</span><span class="s2">oAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P&quot;&quot;&quot;</span> 
 <span class="nb">print</span><span class="p">(</span><span class="n">sender_confirmation</span><span class="p">)</span>
 </pre>
             </div>
@@ -6380,9 +6122,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>[
-&#34;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE\t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;\n^ca+\t&gt;pwDOZ05oU6iT&amp;jz_I.}yte\t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;&#34;
-]
+            <pre>)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y\BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;\q)V&amp;8Iet~&lt;J{4|K*j%P&#34;J	Y5Bm	oAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P
 </pre>
           </div>
         </div>
@@ -6397,13 +6137,12 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[123]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
               <pre><span></span><span class="n">confirmation_string</span> <span class="o">=</span> <span class="n">other_person_in_the_network</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">sender_confirmation</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">confirmation_string</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">confirmation_string</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="n">confirmation_string</span><span class="p">)</span>
 </pre>
             </div>
@@ -6426,7 +6165,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
             <pre>[[&#39;assets&#39;,	1000],
-[&#39;receiver_pub&#39;,	(7313, 4457)],
+[&#39;receiver_pub&#39;,	(34049, 16153)],
 [&#39;prev_hash&#39;,	000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9]]
 </pre>
           </div>
@@ -6442,7 +6181,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[128]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[124]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6468,7 +6207,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>(7313, 4457)
+            <pre>(34049, 16153)
 000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9
 </pre>
           </div>
@@ -6497,7 +6236,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[125]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6518,7 +6257,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[129]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[125]:</div>
 
 
 
@@ -6539,7 +6278,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[130]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[126]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6561,7 +6300,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[130]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[126]:</div>
 
 
 
@@ -6569,9 +6308,9 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
           <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
             <pre>{
     &#34;prev_hash&#34;: &#34;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#34;,
-    &#34;hash&#34;: &#34;000055561c459c463beba5f400067485cd6fd68ca3f860f7f35a49be7c095e4f&#34;,
-    &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;2023-05-04T03:18:29.299250&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;[\\n\&#34;&lt;rsachunkrsa&gt;  EcD0HM&amp;E@Kb+y fE\\\\t&gt;#s`F?)R}UU_~*[6Bch,)~{vK2yf1i?pBAF2dn7I#{D7d56h.oA/p&amp;tTg7urbPvx&amp;\\\\n^ca+\\\\t&gt;pwDOZ05oU6iT&amp;jz_I.}yte\\\\t@YE/38&amp;maGrf*xF&gt;~`i&lt;/rsachunkrsa&gt;\&#34;\\n]&#39;}&#34;,
-    &#34;nonce&#34;: 57254
+    &#34;hash&#34;: &#34;000036ebb76fbf1e470018f63d363f24f064c5d30121d726ca474f1499dca7c0&#34;,
+    &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;2023-05-09T22:01:00.655549&#39;, &#39;sender_id&#39;: &#39;Bob&#39;, &#39;receiver_id&#39;: &#39;Alice&#39;, &#39;assets&#39;: 1000, &#39;prev_hash&#39;: &#39;000015420debcdd55c00babc9c3a5a9c4ab22280cf9a6874986c427281dd79b9&#39;, &#39;sender_confirmation&#39;: &#39;)u9&gt;%&gt;prl0YwZU:X0YA*Pr}fF?(zSv@Y\\\\BJ{kiDg4tX[oQ^z4JF}XsU+Pb&gt;\\\\q)V&amp;8Iet~&lt;J{4|K*j%P\&#34;J\\tY5Bm\\toAF_ov`5uj41;9!86B$gH:vqTkpj,xpd|iw3}JbUs95&amp;$1[P&#39;}&#34;,
+    &#34;nonce&#34;: 62310
 }</pre>
           </div>
 
@@ -6587,7 +6326,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6608,7 +6347,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[131]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
 
 
 
@@ -6642,7 +6381,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[128]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6664,7 +6403,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[132]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[128]:</div>
 
 
 
@@ -6676,7 +6415,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
         &#34;data&#34;: &#34;local network&#34;
     },
     &#34;last_block&#34;: {
-        &#34;hash&#34;: &#34;000055561c459c463beba5f400067485cd6fd68ca3f860f7f35a49be7c095e4f&#34;,
+        &#34;hash&#34;: &#34;000036ebb76fbf1e470018f63d363f24f064c5d30121d726ca474f1499dca7c0&#34;,
         &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;...&#34;
     }
 }</pre>
@@ -6708,7 +6447,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[133]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[129]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6730,7 +6469,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[134]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[130]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6766,7 +6505,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6792,7 +6531,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>{&#39;timestamp&#39;: &#39;2023-05-04T03:19:09.156649&#39;, &#39;sender_id&#39;: &#39;Alice&#39;, &#39;receiver_id&#39;: &#39;Bob&#39;, &#39;assets&#39;: 500, &#39;prev_hash&#39;: &#39;000055561c459c463beba5f400067485cd6fd68ca3f860f7f35a49be7c095e4f&#39;, &#39;sender_confirmation&#39;: &#39;[\n&#34;&lt;rsachunkrsa&gt; 5S*vJW]&lt;/}~!C#|rb9Gdp203+N75_7#(6D~rNm-aHE1c=hNo3ozk,_A4UZ)_eY\\tem/\\&#34;}:wx%oLVwAPknU1lt*DF-(68+1U^xXvE/*HlqG#ti:]f?2l\\n^TG77\&#39;]Kmp+,u/z&lt;/rsachunkrsa&gt;&#34;\n]&#39;}
+            <pre>{&#39;timestamp&#39;: &#39;2023-05-09T22:02:06.249209&#39;, &#39;sender_id&#39;: &#39;Alice&#39;, &#39;receiver_id&#39;: &#39;Bob&#39;, &#39;assets&#39;: 500, &#39;prev_hash&#39;: &#39;000036ebb76fbf1e470018f63d363f24f064c5d30121d726ca474f1499dca7c0&#39;, &#39;sender_confirmation&#39;: &#39;\nu&amp;R|YfX# Ta@W_.&gt;&#34;?M3#c[@y\nxxgZYma^^7c`mjTS2VT^+x)\nA/NETWY&amp;2}]es^fVl={?aF=jo]@0?{(\tKX&lt;J^W1#S2@1Edt!2*\nVJ&gt;Bzk(Wuk,x~j p5/0Y?DlXF,X-m &#39;}
 </pre>
           </div>
         </div>
@@ -6807,59 +6546,13 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[136]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[132]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="k">raise</span> <span class="ne">Warning</span><span class="p">(</span><span class="s2">&quot;Sender confirmation below needs to be set manually due to dirty rsa output&quot;</span><span class="p">)</span>
-</pre>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="jp-Cell-outputWrapper">
-      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-      </div>
-
-
-      <div class="jp-OutputArea jp-Cell-outputArea">
-        <div class="jp-OutputArea-child">
-
-          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-            <pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">Warning</span>                                   Traceback (most recent call last)
-<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_13998/1177164807.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">raise</span> Warning<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Sender confirmation below needs to be set manually due to dirty rsa output&#34;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">Warning</span>: Sender confirmation below needs to be set manually due to dirty rsa output</pre>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-    <div class="jp-Cell-inputWrapper">
-      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-      </div>
-      <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[137]:</div>
-        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-          <div class="CodeMirror cm-s-jupyter">
-            <div class=" highlight hl-ipython3">
-              <pre><span></span><span class="n">sender_confirmation</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;[</span><span class="se">\n</span><span class="s2">&quot;&lt;rsachunkrsa&gt; 5S*vJW]&lt;/}~!C#|rb9Gdp203+N75_7#(6D~rNm-aHE1c=hNo3ozk,_A4UZ)_eY</span><span class="se">\\</span><span class="s2">tem/</span><span class="se">\\</span><span class="s2">&quot;}:wx</span><span class="si">%o</span><span class="s2">LVwAPknU1lt*DF-(68+1U^xXvE/*HlqG#ti:]f?2l</span><span class="se">\\</span><span class="s2">n^TG77</span><span class="se">\&#39;</span><span class="s2">]Kmp+,u/z&lt;/rsachunkrsa&gt;&quot;</span><span class="se">\n</span><span class="s2">]&quot;&quot;&quot;</span> 
+              <pre><span></span><span class="n">sender_confirmation</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\n</span><span class="s2">u&amp;R|YfX# Ta@W_.&gt;&quot;?M3#c[@y</span><span class="se">\n</span><span class="s2">xxgZYma^^7c`mjTS2VT^+x)</span><span class="se">\n</span><span class="s2">A/NETWY&amp;2}]es^fVl={?aF=jo]@0?{(</span><span class="se">\t</span><span class="s2">KX&lt;J^W1#S2@1Edt!2*</span><span class="se">\n</span><span class="s2">VJ&gt;Bzk(Wuk,x~j p5/0Y?DlXF,X-m &quot;&quot;&quot;</span> 
 <span class="n">confirmation_string</span> <span class="o">=</span> <span class="n">other_person_in_the_network</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">sender_confirmation</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span> <span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">)</span>
-<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">sender</span><span class="o">.</span><span class="n">pub</span><span class="p">,</span> <span class="n">crypto</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">):</span>
-    <span class="n">confirmation_string</span> <span class="o">=</span> <span class="n">crypto</span><span class="o">.</span><span class="n">read_from_rsa</span><span class="p">(</span><span class="n">confirmation_string</span><span class="p">)</span>
+
 <span class="n">confirmation</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">txt2obj</span><span class="p">(</span><span class="n">confirmation_string</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">confirmation</span><span class="p">)</span>
 </pre>
@@ -6883,8 +6576,8 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
             <pre>[[&#39;assets&#39;,	500],
-[&#39;receiver_pub&#39;,	(7313, 4603)],
-[&#39;prev_hash&#39;,	000055561c459c463beba5f400067485cd6fd68ca3f860f7f35a49be7c095e4f]]
+[&#39;receiver_pub&#39;,	(34691, 16733)],
+[&#39;prev_hash&#39;,	000036ebb76fbf1e470018f63d363f24f064c5d30121d726ca474f1499dca7c0]]
 </pre>
           </div>
         </div>
@@ -6899,7 +6592,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[138]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[133]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6925,8 +6618,8 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
 
 
           <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-            <pre>(7313, 4603)
-000055561c459c463beba5f400067485cd6fd68ca3f860f7f35a49be7c095e4f
+            <pre>(34691, 16733)
+000036ebb76fbf1e470018f63d363f24f064c5d30121d726ca474f1499dca7c0
 </pre>
           </div>
         </div>
@@ -6954,7 +6647,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[139]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[134]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6974,7 +6667,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
       </div>
       <div class="jp-InputArea jp-Cell-inputArea">
-        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[140]:</div>
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[135]:</div>
         <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
           <div class="CodeMirror cm-s-jupyter">
             <div class=" highlight hl-ipython3">
@@ -6995,7 +6688,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
       <div class="jp-OutputArea jp-Cell-outputArea">
         <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 
-          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[140]:</div>
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[135]:</div>
 
 
 
@@ -7008,7 +6701,7 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
     },
     &#34;...&#34;: &#34;...&#34;,
     &#34;last_block&#34;: {
-        &#34;hash&#34;: &#34;0000a07716c72426eccb891b3be357269294239927c637d5ace03bcab696d617&#34;,
+        &#34;hash&#34;: &#34;0000400eefda387a2c3c7ef8ffc4ad50e5f8837109c096ad1c08032edc219e89&#34;,
         &#34;data&#34;: &#34;{&#39;timestamp&#39;: &#39;...&#34;
     }
 }</pre>
@@ -7021,3 +6714,23 @@ Hello Bob! This is Alice. Please send me $1000 to this account: (0987654321)
     </div>
 
   </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span> 
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </>
