@@ -18,6 +18,9 @@ html {
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
@@ -156,7 +159,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 
 .masthead {
@@ -243,7 +246,9 @@ nav {
 }
 
 //
-// .main
+#main{
+  flex: 1;
+}
 //
 
 .posts > .post {
@@ -276,14 +281,11 @@ nav {
   }
 }
 
-
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
-  position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
@@ -291,21 +293,11 @@ footer {
   padding: 0;
   text-align: center;
 }
-//. toc
-
-.toc {
-  grid-area: menu;
-}
-
-.contentmain {
-  grid-area: main;
-}
 
 .grid-container {
   display: grid;
   grid-template-areas:
-      'menu main main main main main main main';
-  gap: 10px;
+      'menu main main main';
   padding: 10px;
 
   @include mobile{
@@ -317,13 +309,11 @@ footer {
   }
 }
 
-.grid-container>div.toc {
-  background-color: #abe1e1;
-  color: black;
-  text-align: left;
-  padding: 10px;
-  font-size: 20px;
-  overflow-x: auto;
+.sidebar {
+  grid-area: menu;
+  height: 100%;
+  width: 300px;
+  background-color: #a6e5ec;
 
   a{
     color: black;
@@ -331,12 +321,16 @@ footer {
   }
 
   @include mobile {
-    font-size: 15px;
+    position: relative;
     margin: 10px;
     padding: 5px;
+    width:100%;
   }
 }
 
+.content-main {
+  grid-area: main;
+}
 
 .date-tags{
   width: auto;

@@ -37,7 +37,7 @@ enumerate_grand_children: false
     </h1>
 
     <div class="grid-container">
-        <div class="toc">
+        <div class="sidebar collapse">
 
             <h3>
                 {% if page.toc_title %}
@@ -83,7 +83,7 @@ enumerate_grand_children: false
             </ol>
         </div>
 
-        <div class="entry contentmain">
+        <div class="entry content-main">
             {{ content }}
             {% include root-dir-contents.html %}
         </div>

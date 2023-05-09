@@ -1,25 +1,24 @@
-<ul>
-    {% assign counter = 0 %}
-    {% assign page_url_array = page.url|split:'/' %}
-    {% assign page_name = page_url_array[-1] %}
-    {% assign page_tags = page_name| split:"-" %}
+{% assign counter = 0 %}
+{% assign page_url_array = page.url|split:'/' %}
+{% assign page_name = page_url_array[-1] %}
+{% assign page_tags = page_name| split:"-" %}
 
-    {% for post in site.posts %}
-    {% if counter >= page.max_num_posts %}
-    {% break %}
-    {% endif %}
-    {% if post.layout contains "post"%}
+{% for post in site.posts %}
+{% if counter >= page.max_num_posts %}
+{% break %}
+{% endif %}
+{% if post.layout contains "post"%}
 
-    {% assign contains_page_tags = false %}
-    {% for tag in page_tags %}
-    {% if post.tags contains tag %}
-    {% assign contains_page_tags = true %}
-    {% break %}
-    {% endif %}
-    {% endfor %}
-
+{% assign contains_page_tags = false %}
+{% for tag in page_tags %}
+{% if post.tags contains tag %}
+{% assign contains_page_tags = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+<div>
     {% if post.url contains page.url or contains_page_tags %}
-    <li>
+    <div>
         <h3>
             <a href="{{site.url}}{{post.url}}">{{post.title}}</a>
         </h3>
@@ -60,10 +59,10 @@
         </table>
         {{ post.excerpt }}
         <hr>
-    </li>
+    </div>
     {% assign counter = counter + 1 %}
     {% endif %}
     {% endif %}
     {% endfor %}
 
-</ul>
+</div>
