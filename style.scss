@@ -315,6 +315,7 @@ footer {
   height: 100%;
   width: 300px;
   background-color: #a6e5ec;
+  padding: auto;
 
   a{
     color: black;
@@ -355,6 +356,20 @@ footer {
   margin: inherit;
   border-radius: 10px;
   box-sizing: content-box;
+}
+
+.only-mobile{
+  display: none;
+  @include mobile{
+  display:flow-root;
+  }
+}
+
+.only-desktop{
+  display: flow-root;
+  @include mobile{
+  display: none;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

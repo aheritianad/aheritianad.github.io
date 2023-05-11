@@ -20,7 +20,6 @@ enumerate_grand_children: false
 {% endif %}
 
 <article>
-
     <h1>
         {% if page_parent.size > 1 %}
         {% if page_grand_parent.size > 1 %}
@@ -39,13 +38,14 @@ enumerate_grand_children: false
     <div class="grid-container">
         <div class="sidebar collapse">
 
-            <h3>
+            <h3 style="padding-left: 2px;">
                 {% if page.toc_title %}
                 {{page.toc_title}}
                 {% else %}
                 Contents
                 {% endif %}
             </h3>
+
             <ol>
                 {% assign sorted_post = site.posts|sort %}
                 {% for post in sorted_post %}
@@ -53,30 +53,26 @@ enumerate_grand_children: false
                 {% assign post_parent = post_url|pop %}
                 {% assign page_url = page.url|split:"/"%}
 
-                {%if post_parent == page_url %}
+                {%if post_parent == page_url and post.layout == "root-directory" %}
                 <li>
-                    {% if page.enumerate_grand_children == true and post.layout == "root-directory" %}
-                    <details>
-                        <summary>
-                            {% endif %}
-                            <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}">
-                                {{ post.title }}
-                            </a>
-                            {% if page.enumerate_grand_children == true %}
-                        </summary>
-                        <ul>
-                            {% for child_post in sorted_post %}
-                            {% assign child_post_url_array = child_post.url|split:"/" %}
-                            {% assign child_post_parent = child_post_url_array|pop %}
-                            {% if child_post_parent == post_url%}
-                            <li>
-                                <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
-                            </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </details>
-                    {% endif %}
+                    <div>
+                        <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}">
+                            {{ post.title }}
+                        </a>
+                        <div class="only-desktop">
+                            <ul>
+                                {% for child_post in sorted_post %}
+                                {% assign child_post_url_array = child_post.url|split:"/" %}
+                                {% assign child_post_parent = child_post_url_array|pop %}
+                                {% if child_post_parent == post_url%}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ child_post.url }}">{{ child_post.title }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 {% endif %}
                 {% endfor %}
