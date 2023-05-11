@@ -59,7 +59,7 @@ enumerate_grand_children: false
                         <a href="{{site.url}}{{ site.baseurl }}{{ post.url }}">
                             {{ post.title }}
                         </a>
-                        <div class="only-desktop">
+                        <div class="desktop-only">
                             <ul>
                                 {% for child_post in sorted_post %}
                                 {% assign child_post_url_array = child_post.url|split:"/" %}

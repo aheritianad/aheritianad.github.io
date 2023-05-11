@@ -200,7 +200,7 @@ img {
 
 .site-name {
   margin: 5px;
-  color: $darkGray;
+  color: #FFF;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -210,7 +210,6 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
   font-size: 16px;
 
   @include mobile {
@@ -233,14 +232,13 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: #ebebeb;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
     }
   }
 }
@@ -358,19 +356,30 @@ footer {
   box-sizing: content-box;
 }
 
-.only-mobile{
+.mobile-only{
   display: none;
   @include mobile{
   display:flow-root;
   }
 }
 
-.only-desktop{
+.desktop-only{
   display: flow-root;
   @include mobile{
   display: none;
   }
 }
+
+.head-bg{
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/bg.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat-x;
+  // background-attachment: fixed;
+  color: #fff;
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
