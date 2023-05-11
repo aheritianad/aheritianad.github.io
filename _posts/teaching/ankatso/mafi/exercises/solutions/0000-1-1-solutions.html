@@ -1,0 +1,69 @@
+---
+layout: root-directory
+permalink: /teaching/ankatso/mafi/exercises/solutions/
+---
+
+{% assign page_url_array = page.url|split:'/' %}
+{% assign page_name = page_url_array[-1] %}
+{% assign page_tags = page_name| split:"-" %}
+
+{% for post in site.posts %}
+
+{% if post.layout contains 'page' %}
+
+{% assign contains_page_tags = false %}
+{% for tag in page_tags %}
+{% if post.tags contains tag %}
+{% assign contains_page_tags = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+<div>
+    {% if post.url contains page.url or contains_page_tags %}
+    <div>
+        <h3>
+            <a href="{{site.url}}{{post.url}}">{{post.title}}</a>
+        </h3>
+
+        <table class="date-tags">
+            <tr>
+                <td class="date">
+                    {% assign post_day = post.date|date:"%e" %}
+                    {% assign post_day = post_day|split:" " %}
+                    {% assign post_day = ""|concat:post_day %}
+                    {% include svg-calendar-date.html param=post_day %}
+                    {{ post.date | date: "%b %Y" }}
+                </td>
+                <td class="separator"><wbr></td>
+                <td class="tags">
+                    {% if post.tags.size > 0%}
+                    {% if post.tags.size > 1%}
+                    {% include svg-tags.html %}
+                    {% else%}
+                    {% include svg-tag.html %}
+                    {% endif %}
+                    {% for tag in post.tags%}
+                    {% for post2 in site.posts%}
+                    {% if post2.layout == "root-directory" %}
+                    {% assign post2_url_array = post2.url|split:"/"%}
+                    {% assign post2_tag = post2_url_array[-1] %}
+                    {% if post2_tag == tag %}
+                    <a class="tag-instance" href="{{site.baseurl}}{{post2.url}}">
+                        {{tag}}
+                    </a>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+        {{ post.excerpt }}
+        <hr>
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+</div>
