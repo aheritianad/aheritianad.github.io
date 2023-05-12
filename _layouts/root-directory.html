@@ -23,14 +23,20 @@ enumerate_grand_children: false
     <h1>
         {% if page_parent.size > 1 %}
         {% if page_grand_parent.size > 1 %}
-        <a href="{{ site.baseurl }}{{ page_grand_parent }}">
+        <a href="{{ site.baseurl }}{{ page_grand_parent }}" class="desktop--only">
             {% include svg-box-arrow-left.html %}
         </a>
         {% endif %}
+
         <a href="{{ site.baseurl }}{{ page_parent }}">
-            {{parent_title}}
+            <span class="mobile-only">
+                {% include svg-box-arrow-left.html %}
+            </span>
+            <span class="desktop-only">
+                {{parent_title}}
+                &gt;
+            </span>
         </a>
-        &gt;
         {% endif %}
         {{ page.title }}
     </h1>

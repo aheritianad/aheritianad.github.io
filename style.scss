@@ -221,6 +221,8 @@ nav {
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
   font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   @include mobile {
     float: none;
@@ -355,15 +357,16 @@ footer {
   box-sizing: content-box;
 }
 
+
 .mobile-only{
   display: none;
   @include mobile{
-  display:flow-root;
+  display:inherit;
   }
 }
 
 .desktop-only{
-  display: flow-root;
+  display: inherit;
   @include mobile{
   display: none;
   }
