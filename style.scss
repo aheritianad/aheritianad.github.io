@@ -1,6 +1,5 @@
----
----
-
+--- 
+--- 
 //
 // IMPORTS
 //
@@ -21,7 +20,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -32,13 +31,19 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
   margin: 1em 0 15px;
+  margin-left: 5px;
   padding: 0;
 
   @include mobile {
@@ -48,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+
   a {
     color: inherit;
   }
@@ -73,13 +79,16 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
-  &:hover, &:active {
+  cursor: pointer;
+
+  &:hover,
+  &:active {
     color: $blue;
   }
 }
 
-ul, ol {
+ul,
+ol {
   margin: 15px 0;
   padding-left: 30px;
 }
@@ -92,19 +101,25 @@ ol {
   list-style-type: decimal;
 }
 
-ol ul, ul ol, ul ul, ol ol {
+ol ul,
+ul ol,
+ul ul,
+ol ol {
   margin: 0;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
-strong, b {
+strong,
+b {
   font-weight: bold;
 }
 
@@ -120,9 +135,9 @@ img {
 .date {
   font-style: italic;
   font-size: small;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: $gray;
-  
+
 }
 
 
@@ -132,6 +147,7 @@ img {
   color: $black;
   background: $lightGray;
 }
+
 ::selection {
   color: $black;
   background: $lightGray;
@@ -141,12 +157,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -246,17 +262,18 @@ nav {
 }
 
 //
-#main{
+#main {
   flex: 1;
 }
+
 //
 
-.posts > .post {
+.posts>.post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
 
-.posts > .post:last-child {
+.posts>.post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
 }
@@ -297,11 +314,11 @@ footer {
 .grid-container {
   display: grid;
   grid-template-areas:
-      'menu main main main';
+    'menu main main main';
   padding: 10px;
   gap: 10px;
 
-  @include mobile{
+  @include mobile {
     gap: 0px;
     padding: 5px;
     grid-template-areas:
@@ -317,16 +334,16 @@ footer {
   background-color: #a6e5ec;
   padding: auto;
 
-  a{
+  a {
     color: black;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
   }
 
   @include mobile {
     position: relative;
     margin: 10px;
     padding: 5px;
-    width:100%;
+    width: 100%;
   }
 }
 
@@ -334,16 +351,17 @@ footer {
   grid-area: main;
 }
 
-.date-tags{
+.date-tags {
   width: auto;
 
-  .separator{
+  .separator {
     width: 20px;
   }
 
-  .tags{
+  .tags {
     margin: 1px;
-    >a{
+
+    >a {
       background-color: #e1ebf5;
     }
   }
@@ -351,7 +369,7 @@ footer {
 
 .tag-instance {
   font-size: small;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 2px;
   margin: inherit;
   border-radius: 10px;
@@ -359,30 +377,31 @@ footer {
 }
 
 
-.mobile-only{
+.mobile-only {
   display: none;
-  @include mobile{
-  display:inherit;
+
+  @include mobile {
+    display: inherit;
   }
 }
 
-.desktop-only{
+.desktop-only {
   display: inherit;
-  @include mobile{
-  display: none;
+
+  @include mobile {
+    display: none;
   }
 }
 
-.head-bg{
+.head-bg {
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/bg.jpg);
   background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(/images/bg.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat:repeat-x;
+  background-repeat: repeat-x;
   // background-attachment: fixed;
   color: #fff;
 }
-
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start

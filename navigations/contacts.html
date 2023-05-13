@@ -3,28 +3,377 @@ layout: page
 title: Contact
 permalink: /contact
 ---
+<style type="text/css">
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .contact {
+        position: relative;
+        min-height: 700px;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    @media (max-width: 991.98px) {
+        .contact .contact-form-card {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .contact .contact-form-card,
+        .contact .contact-info-card {
+            min-height: auto !important;
+        }
+    }
+
+    .contact .contact-form-card,
+    .contact .contact-info-card {
+        padding: 35px;
+        background: #fff;
+        min-height: 500px;
+    }
+
+    .col-lg-4 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 33.33333%;
+        -ms-flex: 0 0 33.33333%;
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+
+    }
 
 
-<div class="container contact">
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="contact-form-card">
-                <h4 class="contact-title">Send a message</h4>
-                <form action="">
-                    <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Name *" required>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="email" placeholder="Email *" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" id=" placeholder=" Message *" rows="7" required></textarea>
-                    </div>
-                    <div class="form-group ">
-                        <button type="submit" class="form-control btn btn-primary">Send Message</button>
-                    </div>
-                </form>
+    .contact .contact-info-card {
+        padding-right: 20px;
+    }
+
+    .contact .contact-title {
+        margin-bottom: 30px;
+    }
+
+    .contact .contact-title::after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: #F85C70;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: #212529;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .btn {
+            -webkit-transition: none;
+            transition: none;
+        }
+    }
+
+    .btn:hover {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    .btn:focus,
+    .btn.focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(248, 92, 112, 0.25);
+    }
+
+    .btn.disabled,
+    .btn:disabled {
+        opacity: 0.65;
+    }
+
+    a.btn.disabled,
+    fieldset:disabled a.btn {
+        pointer-events: none;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #F85C70;
+        border-color: #F85C70;
+    }
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #f63750;
+        border-color: #f62b45;
+    }
+
+    .btn-primary:focus,
+    .btn-primary.focus {
+        box-shadow: 0 0 0 0.2rem rgba(249, 116, 133, 0.5);
+    }
+
+    .btn-primary.disabled,
+    .btn-primary:disabled {
+        color: #fff;
+        background-color: #F85C70;
+        border-color: #F85C70;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #f62b45;
+        border-color: #f51f3a;
+    }
+
+    .btn-primary:not(:disabled):not(.disabled):active:focus,
+    .btn-primary:not(:disabled):not(.disabled).active:focus,
+    .show>.btn-primary.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(249, 116, 133, 0.5);
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col,
+    .col-auto,
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm,
+    .col-sm-auto,
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md,
+    .col-md-auto,
+    .col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg,
+    .col-lg-auto,
+    .col-xl-1,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12,
+    .col-xl,
+    .col-xl-auto {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .col-lg-8 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 66.66667%;
+        -ms-flex: 0 0 66.66667%;
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .contact-container {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .contact-container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .contact-container {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .contact-container {
+            max-width: 1140px;
+        }
+    }
+
+    .row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .pt-1 {
+        padding-top: 0.25rem !important;
+    }
+
+    .mr-1 {
+        margin-right: 0.25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .icon-md {
+        font-size: 22px;
+    }
+
+    .d-inline {
+        display: inline !important;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<p style="text-align: center;">My username is "aheritianad".</p>
+<div class="contact-container contact">
+    <div class="contact-info-card">
+        <h4 class="contact-title">Get in touch</h4>
+        <div class="row mb-2">
+            <div class="col-10 d-inline">
+                <h6>Phone</h6>
+                <span class="text-muted">+261346793040</span>
             </div>
         </div>
+        <div class="row mb-2">
+            <div class="col-10 d-inline">
+                <h6>Email</h6>
+                <span class="text-muted">[username]@gmail.com</span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-10 d-inline">
+                <h6>LinkedIn</h6>
+                <a href="https://linkedin.com/in/aheritianad" class="text-muted">aheritianad</a>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-10 d-inline">
+                <h6>Skype</h6>
+                <span class="text-muted">heritiana_3</span>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-10 d-inline">
+                <h6>Address</h6>
+                <span class="text-muted">Antananarivo Madagascar.</span>
+            </div>
         </div>
     </div>
+    <div class="contact-form-card">
+        <h4 class="contact-title">Send a message</h4>
+        <form action="">
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Name *" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" placeholder="Email *" required>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder=" Message *" rows="7"
+                    required>Does not work for the moment.</textarea>
+            </div>
+            <div class="form-group ">
+                <button type="submit" class="form-control btn btn-primary">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+</div>
