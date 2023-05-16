@@ -40,25 +40,34 @@ Here are some exercises that I recommend to do.
 7. `bcbcpy.crypto`
 8. `is` vs `==`
 
-## 2023-05-18 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230518)]
+## 2023-05-15 [[tuto]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230515)]
 
 1. Authentication
 2. `overflow` & `underflow`
 3. `OOP`
    1. Encapsulation
    2. `@property` & `@---.setter`
-   3. `@...method`
-   4. Inheritance
+   3. Inheritance
       1. `super`
-      2. Type
-         1. Single
-         2. Hierarchical
-         3. Multilevel
-         4. Hybrid
-   5. Abstraction
+      2. Single level
+   4. Abstraction
 
 ## 2023-05-25 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230525)]
 
+1. `OOP`
+   1. `@...method`
+   2. Inheritance
+      1. Type
+         1. Hierarchical
+         2. Multilevel
+         3. Hybrid
+2. Linked List
+3. Block
+
 ## 2023-06-01 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230601)]
 
+1. Blockchain
+
 ## 2023-06-08 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230608)]
+
+1. Python module implementation

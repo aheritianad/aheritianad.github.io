@@ -1,0 +1,3498 @@
+---
+layout: page-notebook-comments
+title: Tuto 2023-05-15
+permalink: /teaching/ankatso/mafi/exercises/solutions/20230515
+tags: ["python"]
+---
+
+This notebook is available [<a
+  href="https://github.com/aheritianad/BootCamp-BlockChain-and-Python/tree/main/exo-solution">here</a>].
+
+<div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
+
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <p><a
+              href="https://aheritianad.github.io/teaching/ankatso/mafi/exercises/solutions/20230515">https://aheritianad.github.io/teaching/ankatso/mafi/exercises/solutions/20230515</a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h1 id="Assignment-&amp;-Mutable-vs-Immutable">Assignment &amp; Mutable vs Immutable<a class="anchor-link"
+              href="#Assignment-&amp;-Mutable-vs-Immutable">&#182;</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;f&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;g&quot;</span><span class="p">]</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>[1, 2, 3, &#39;f&#39;]</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">g</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>[1, 2, 3]</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[]):</span>
+    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>[1, 2, 3, 4]
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>[1, 2, 3, 4]</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>[5]
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>[1, 2, 3, 4]</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>[5, 6]
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">y</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>[5]
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">h</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>[6]
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h1 id="OOP">OOP<a class="anchor-link" href="#OOP">&#182;</a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">ClassName</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating instance with __new__.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arg</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Initializing instance with __init__ and agument </span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arg</span> <span class="o">=</span> <span class="n">arg</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">ClassName</span><span class="p">(</span><span class="s2">&quot;my_argument&quot;</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>Creating instance with __new__.
+Initializing instance with __init__ and agument my_argument.
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>__main__.ClassName</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">arg</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;my_argument&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">salary</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">algebra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_salary</span> <span class="o">=</span> <span class="n">salary</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__algebra</span> <span class="o">=</span> <span class="n">algebra</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;repr </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;str &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span><span class="s2">&quot;Person&quot;</span><span class="p">):</span> <span class="c1"># self + other</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Person</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;other needs to be Person&quot;</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">sex</span> <span class="o">=</span> <span class="s2">&quot;M&quot;</span> <span class="k">if</span> <span class="s2">&quot;M&quot;</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sex</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">sex</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;F&quot;</span>
+        <span class="n">age</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+        <span class="n">salary</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_salary</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">_salary</span>
+        <span class="n">algebra</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__algebra</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">_Person__algebra</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">algebra</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">introduce_myself</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">to</span><span class="si">}</span><span class="s2">! I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> and I am </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">person1</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;name1&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">person2</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;name2&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">person1</span><span class="p">)</span>
+<span class="n">person2</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>str name1
+</pre>
+          </div>
+        </div>
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>repr name2</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">person1</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">person1</span><span class="o">.</span><span class="n">sex</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(&#39;name1&#39;, &#39;M&#39;)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">person2</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">person2</span><span class="o">.</span><span class="n">sex</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(&#39;name2&#39;, &#39;F&#39;)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">person1</span><span class="o">.</span><span class="n">introduce_myself</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>Hello all! I am name1 and I am 1 years old.
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">person1</span><span class="o">.</span><span class="n">introduce_myself</span><span class="p">(</span><span class="n">to</span><span class="o">=</span><span class="s2">&quot;class&quot;</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>Hello class! I am name1 and I am 1 years old.
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">Woman</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Woman repr&quot;</span>
+    
+    <span class="k">def</span> <span class="nf">introduce_myself</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">to</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">to</span><span class="si">}</span><span class="s2">! my name is </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">. I am a girl of </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+
+
+<span class="k">class</span> <span class="nc">Man</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;Man repr&quot;</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">man</span> <span class="o">=</span> <span class="n">Man</span><span class="p">(</span><span class="s2">&quot;man_name&quot;</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
+<span class="n">woman</span> <span class="o">=</span> <span class="n">Woman</span><span class="p">(</span><span class="s2">&quot;woman_name&quot;</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="n">man</span><span class="o">.</span><span class="n">sex</span><span class="p">,</span> <span class="n">woman</span><span class="o">.</span><span class="n">sex</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(&#39;M&#39;, &#39;F&#39;)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">man</span><span class="p">,</span> <span class="n">Person</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>True</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">woman</span><span class="o">.</span><span class="n">age</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>20</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">man</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Man repr</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">man</span><span class="o">.</span><span class="n">_salary</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>0</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">woman</span><span class="o">.</span><span class="n">_Person__algebra</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[29]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>0</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">man</span><span class="o">.</span><span class="n">introduce_myself</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>Hello all! I am man_name and I am 21 years old.
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">woman</span><span class="o">.</span><span class="n">introduce_myself</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>Hello all! my name is woman_name. I am a girl of 20 years old.
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">baby</span> <span class="o">=</span> <span class="n">man</span> <span class="o">+</span> <span class="n">woman</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">baby</span><span class="o">.</span><span class="n">sex</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;M&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">man</span> <span class="o">+</span> <span class="mi">1</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+            <pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_24560/1757345412.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>man <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">1</span>
+
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_24560/1173461491.py</span> in <span class="ansi-cyan-fg">__add__</span><span class="ansi-blue-fg">(self, other)</span>
+<span class="ansi-green-intense-fg ansi-bold">     15</span>     <span class="ansi-green-fg">def</span> __add__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">&#34;Person&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span> <span class="ansi-red-fg"># self + other</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>other<span class="ansi-blue-fg">,</span> Person<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 17</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;other needs to be Person&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     18</span>         name <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>name <span class="ansi-blue-fg">+</span> <span class="ansi-blue-fg">&#34; &#34;</span> <span class="ansi-blue-fg">+</span> other<span class="ansi-blue-fg">.</span>name
+<span class="ansi-green-intense-fg ansi-bold">     19</span>         sex <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;M&#34;</span> <span class="ansi-green-fg">if</span> <span class="ansi-blue-fg">&#34;M&#34;</span> <span class="ansi-green-fg">in</span> <span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>sex<span class="ansi-blue-fg">,</span> other<span class="ansi-blue-fg">.</span>sex<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">&#34;F&#34;</span>
+
+<span class="ansi-red-fg">ValueError</span>: other needs to be Person</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;string&quot;</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">OurList</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span><span class="nb">list</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">tmp</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">OurList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mi">799</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="n">s</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>[1, 2, 3, 799]</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>True</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>False</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h2 id="Fraction">Fraction<a class="anchor-link" href="#Fraction">&#182;</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">Frac</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">denom</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ZeroDivisionError</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">=</span> <span class="n">num</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">=</span> <span class="n">denom</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Frac(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="nf">latex</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">latex_n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">latex_n</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">latex_n</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">latex_d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="n">latex_d</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">frac{&quot;</span> <span class="o">+</span> <span class="n">latex_n</span> <span class="o">+</span> <span class="s2">&quot;}&quot;</span> <span class="o">+</span> <span class="s2">&quot;{&quot;</span> <span class="o">+</span> <span class="n">latex_d</span> <span class="o">+</span> <span class="s2">&quot;}&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># self == other</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Frac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">denom</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">num</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">Frac</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># self + other</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Frac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Frac</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">denom</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">num</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">denom</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">Frac</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other + self</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">other</span>
+
+    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># self * other</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Frac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Frac</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">num</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">denom</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">Frac</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other * self</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span>
+
+    <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self / other</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ZeroDivisionError</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Frac</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Frac</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">denom</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">*</span> <span class="n">other</span><span class="o">.</span><span class="n">num</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">/</span> <span class="n">Frac</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rtruediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other / self</span>
+        <span class="k">return</span> <span class="n">Frac</span><span class="p">(</span><span class="n">other</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span>
+
+    <span class="k">def</span> <span class="nf">simplify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># self.simplify()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span>
+                <span class="k">while</span> <span class="n">r</span> <span class="o">:=</span> <span class="n">n</span> <span class="o">%</span> <span class="n">d</span><span class="p">:</span>
+                    <span class="n">n</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="p">,</span> <span class="n">r</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">//=</span> <span class="n">d</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">//=</span> <span class="n">d</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">denom</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">num</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+
+        <span class="k">return</span> <span class="bp">self</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Frac</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(2, 8)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">latex</span><span class="p">())</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>\frac{2}{8}
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>True</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(10, 8)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span><span class="o">*</span><span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(4, 64)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="mi">8</span><span class="o">*</span><span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(16, 8)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span><span class="o">/</span><span class="mf">.5</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(2, 4.0)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="mi">1</span><span class="o">/</span><span class="n">a</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(8, 2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(1, 4)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h2 id="Polynomial">Polynomial<a class="anchor-link" href="#Polynomial">&#182;</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="k">def</span> <span class="nf">process_string_polynomial</span><span class="p">(</span><span class="n">polynomial</span><span class="p">,</span> <span class="n">indeterminate</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">):</span>
+    <span class="n">coeffs</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">polynomial</span> <span class="o">=</span> <span class="n">polynomial</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">monomials</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span>
+        <span class="sa">rf</span><span class="s2">&quot;(?:([+-]?[\d\.\d]*)?(</span><span class="si">{</span><span class="n">indeterminate</span><span class="si">}</span><span class="s2">(?:\^(\d+))?)?)+?&quot;</span><span class="p">,</span> <span class="n">polynomial</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">monomial</span> <span class="ow">in</span> <span class="n">monomials</span><span class="p">:</span>
+        <span class="n">coef_</span> <span class="o">=</span> <span class="n">monomial</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="n">coef</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">coef_</span><span class="p">)</span> <span class="k">if</span> <span class="n">coef_</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">monomial</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="k">if</span> <span class="n">coef</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">monomial</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">elif</span> <span class="n">monomial</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">monomial</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">coeffs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">coef</span>
+    <span class="k">return</span> <span class="n">coeffs</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">process_string_polynomial</span><span class="p">(</span><span class="s2">&quot;X^100-1&quot;</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>{100: 1, 0: -1.0}</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">Polynomial</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coeffs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">indeterminate</span><span class="o">=</span><span class="s2">&quot;X&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="n">coeffs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coeffs</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+                <span class="k">if</span> <span class="n">coeffs</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">coeffs</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coeffs</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ai</span> <span class="ow">in</span> <span class="n">coeffs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span>
+                    <span class="k">if</span> <span class="n">ai</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span>
+            <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">coeffs</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span> <span class="o">=</span> <span class="n">process_string_polynomial</span><span class="p">(</span><span class="n">coeffs</span><span class="p">,</span> <span class="n">indeterminate</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ai</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">coeffs</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">ai</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_var</span> <span class="o">=</span> <span class="n">indeterminate</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>  <span class="c1"># self[key]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># for ai in self or next(self)</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">&lt;</span> <span class="n">i</span><span class="p">:</span>
+                <span class="k">break</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">degree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>  <span class="c1"># self.degree</span>
+        <span class="k">if</span> <span class="bp">self</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">variable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_var</span>
+
+    <span class="nd">@variable</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_variable</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">new_variable</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot; &quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">new_variable</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_var</span> <span class="o">=</span> <span class="n">new_variable</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>  <span class="c1"># self == other</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span> <span class="o">==</span> <span class="p">{}</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Polynomial</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">coeffs</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">other</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="nf">_representation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">use_latex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">with_latex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">char</span><span class="p">:</span> <span class="n">char</span> <span class="k">if</span> <span class="n">use_latex</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">string_version</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="p">):</span>
+            <span class="n">ai</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">string_version</span> <span class="o">+=</span> <span class="s2">&quot;+&quot;</span> <span class="k">if</span> <span class="n">ai</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;-&quot;</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span> <span class="o">==</span> <span class="n">ai</span><span class="p">:</span>
+                <span class="n">ai</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+            <span class="n">string_version</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">ai</span><span class="p">))</span> <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">string_version</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_var</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">string_version</span> <span class="o">+=</span> <span class="p">(</span>
+                <span class="s2">&quot;^&quot;</span> <span class="o">+</span> <span class="n">with_latex</span><span class="p">(</span><span class="s2">&quot;{&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">with_latex</span><span class="p">(</span><span class="s2">&quot;}&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">string_version</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;+&quot;</span><span class="p">:</span>
+            <span class="n">string_version</span> <span class="o">=</span> <span class="n">string_version</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="k">return</span> <span class="n">string_version</span>
+
+    <span class="n">latex</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_representation</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="fm">__str__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_representation</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="fm">__repr__</span> <span class="o">=</span> <span class="k">lambda</span> <span class="bp">self</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Polynomial(</span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">)&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self + other</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Polynomial</span><span class="p">):</span>
+            <span class="n">coeffs</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degree</span><span class="p">,</span> <span class="n">other</span><span class="o">.</span><span class="n">degree</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">ai</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">bi</span> <span class="o">=</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ai</span> <span class="o">+</span> <span class="n">bi</span>
+            <span class="k">return</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other + self</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">other</span>
+
+    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self + other</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">Polynomial</span><span class="p">()</span>  <span class="c1"># Zero polynomial</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Polynomial</span><span class="p">):</span>
+            <span class="n">coeffs</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">degree</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                <span class="n">ci</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">ci</span> <span class="o">+=</span> <span class="bp">self</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">k</span><span class="p">]</span>
+                <span class="n">coeffs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ci</span>
+            <span class="k">return</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">coeffs</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other + self</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">*</span> <span class="n">other</span>
+
+    <span class="k">def</span> <span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self - other</span>
+        <span class="k">return</span> <span class="bp">self</span> <span class="o">+</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__rsub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other - self</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="bp">self</span> <span class="o">+</span> <span class="n">other</span>
+
+    <span class="k">def</span> <span class="fm">__divmod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># divmod(self, other) = self//other, self%other</span>
+        <span class="k">if</span> <span class="n">other</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ZeroDivisionError</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="n">coeffs</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">ai</span> <span class="o">/</span> <span class="n">other</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ai</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+            <span class="k">return</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">coeffs</span><span class="p">),</span> <span class="n">Polynomial</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Polynomial</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">other</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="nb">divmod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+            <span class="n">R</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coeffs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">Q</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">leading_other</span> <span class="o">=</span> <span class="n">other</span><span class="p">[</span><span class="n">other</span><span class="o">.</span><span class="n">degree</span><span class="p">]</span>
+            <span class="k">while</span> <span class="n">other</span><span class="o">.</span><span class="n">degree</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">d</span> <span class="o">:=</span> <span class="nb">max</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">keys</span><span class="p">())):</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">degree</span>
+                <span class="n">Q</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">d</span><span class="p">]</span> <span class="o">/</span> <span class="n">leading_other</span>
+                <span class="c1"># R = R - other*Q[k]*X^k</span>
+                <span class="n">R</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="n">i</span><span class="p">:</span> <span class="n">R</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">R</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">other</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">Q</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="n">R</span> <span class="o">==</span> <span class="p">{}:</span>
+                    <span class="k">break</span>
+            <span class="k">return</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">Q</span><span class="p">),</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="fm">__floordiv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self // other</span>
+        <span class="k">return</span> <span class="nb">divmod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__rfloordiv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># other // self</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Polynomial</span><span class="p">(</span><span class="n">other</span> <span class="o">/</span> <span class="bp">self</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Polynomial</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+    <span class="k">def</span> <span class="fm">__mod__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self % other</span>
+        <span class="k">return</span> <span class="nb">divmod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>  <span class="c1"># self(x)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">degree</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="n">x</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="bp">self</span><span class="p">[</span><span class="n">d</span> <span class="o">-</span> <span class="n">i</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>  <span class="c1"># self.gcd(other)</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="bp">self</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">other</span>
+        <span class="k">while</span> <span class="n">r</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">d</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">r</span><span class="p">,</span> <span class="n">d</span> <span class="o">%</span> <span class="n">r</span>
+        <span class="k">if</span> <span class="n">d</span><span class="o">.</span><span class="n">degree</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">Polynomial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">d</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="n">Polynomial</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># __init__</span>
+<span class="n">P</span>  <span class="c1"># __repr__</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1+X^2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">Q</span> <span class="o">=</span> <span class="n">Polynomial</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span>  <span class="c1"># __init__</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>  <span class="c1"># __str__</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>1-X
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">Polynomial</span><span class="p">(</span><span class="s2">&quot;1+X^100&quot;</span><span class="p">)</span>
+<span class="n">R</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1+X^100)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span> <span class="o">+</span> <span class="n">Q</span>  <span class="c1"># __add__(P,Q)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(2-X+X^2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="n">P</span>  <span class="c1"># __radd__(P,1)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[59]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(2+X^2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span> <span class="o">*</span> <span class="n">Q</span>  <span class="c1"># __mul__(P,Q)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1-X+X^2-X^3)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="mi">0</span> <span class="o">*</span> <span class="n">P</span>  <span class="c1"># __rmul__(P,0)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(0)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">divmod</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">Q</span><span class="p">)</span>  <span class="c1"># __divmod__(P,Q)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>(Polynomial(-1-X), Polynomial(2.0))</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span> <span class="o">//</span> <span class="n">Q</span>  <span class="c1"># __floordiv__(P,Q)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[63]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(-1-X)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># __call__(P, 2)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[64]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>5</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span> <span class="o">-</span> <span class="n">Q</span>  <span class="c1"># __sub__(P,Q)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(X+X^2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="mi">2</span> <span class="o">-</span> <span class="n">P</span>  <span class="c1"># __sub__(P,2)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[66]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1-X^2)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">R</span><span class="o">.</span><span class="n">variable</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[68]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;X&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">R</span><span class="o">.</span><span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;t&quot;</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">R</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[70]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Polynomial(1+t^100)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">R</span><span class="o">.</span><span class="n">latex</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>&#39;1+t^{100}&#39;</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">
+        </div>
+        <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+          <h2 id="Rational-function">Rational function<a class="anchor-link" href="#Rational-function">&#182;</a></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span> <span class="o">=</span> <span class="n">Frac</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
+<span class="n">P_over_Q</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(1+X^2, 1-X)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="nb">print</span><span class="p">(<divan><span class="n">P_over_Q</span><span class="o">.</span><span class="n">latex</span><span class="p">())</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+            <pre>\frac{1+X^{2}}{1-X}
+</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span> <span class="o">+</span> <span class="n">Q</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[74]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(2-2X+2X^2, 1-X)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>Frac(1+X^2, 1-X)</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[76]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+            <pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_24560/524967069.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>P_over_Q<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: &#39;Frac&#39; object is not callable</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[77]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="k">class</span> <span class="nc">CallableFrac</span><span class="p">(</span><span class="n">Frac</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">denom</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">num</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">denom</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span> <span class="o">=</span> <span class="n">CallableFrac</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">Q</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>1.0</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">Q</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child jp-OutputArea-executeResult">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[80]:</div>
+
+
+
+
+          <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+            <pre>0</pre>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span><span class="n">P_over_Q</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jp-Cell-outputWrapper">
+      <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+      </div>
+
+
+      <div class="jp-OutputArea jp-Cell-outputArea">
+        <div class="jp-OutputArea-child">
+
+          <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+          <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+            <pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ZeroDivisionError</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_24560/1789074747.py</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>P_over_Q<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/var/folders/x4/45r2t3bx5l3dc_b3tm_yz7380000gn/T/ipykernel_24560/260581552.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+<span class="ansi-green-intense-fg ansi-bold">      6</span>     <span class="ansi-green-fg">def</span> __call__<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>num<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">/</span>self<span class="ansi-blue-fg">.</span>denom<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> 
+
+<span class="ansi-red-fg">ZeroDivisionError</span>: float division by zero</pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+    <div class="jp-Cell-inputWrapper">
+      <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+      </div>
+      <div class="jp-InputArea jp-Cell-inputArea">
+        <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+        <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+          <div class="CodeMirror cm-s-jupyter">
+            <div class=" highlight hl-ipython3">
+              <pre><span></span> 
+</pre>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
