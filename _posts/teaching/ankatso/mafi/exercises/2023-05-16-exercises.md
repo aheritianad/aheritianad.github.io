@@ -52,7 +52,7 @@ Here are some exercises that I recommend to do.
       2. Single level
    4. Abstraction
 
-## 2023-05-25 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230525)]
+## 2023-05-25
 
 1. `OOP`
    1. `@...method`
@@ -64,10 +64,13 @@ Here are some exercises that I recommend to do.
 2. Linked List
 3. Block
 
-## 2023-06-01 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230601)]
+## 2023-06-01
 
-1. Blockchain
+1. Recap
+2. Blockchain
 
-## 2023-06-08 [[solution]({{site.baseurl}}/teaching/ankatso/mafi/exercises/solutions/20230608)]
+## 2023-06-08
 
 1. Python module implementation
+2. Shell
+3. Git
